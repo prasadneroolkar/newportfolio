@@ -1,0 +1,72 @@
+/* ==========================================================================
+  COMMON VARIABLES
+  ========================================================================== */
+
+// Color variable map
+$colors: ( // non-nested values
+  background: #41873e,
+  border: #c5c5c5,
+  failure: rgba(199, 28, 28, 0.73),
+  success: #00ac57,
+  warning: #ea9f12,
+  white: #ffffff,
+  // nested map inception
+  primary: (base: #25408f,
+    black: #000000,
+    orange: #f58320,
+    orange-light: #ffc075,
+    clay-brown: #6b3400,
+    green-trans: #41873e),
+  secondary: (para:#444444,
+  ));
+
+// Usage
+// .header{
+//   color: color(primary,base); //Nested
+//   color: color(footer);//Direct
+// }
+
+$grid-breakpoints: (xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px) !default;
+
+// ==========================================================================
+//  COMPONENT SPECIFIC VARIABLES
+//  ==========================================================================
+
+// TYPOGRAPHY
+//   ==========================================================================
+$htmlFontSize: 16px;
+$baseFontSize: 16px;
+$baseFontFamily: "Helvetica Neue LT Pro Normal",
+sans-serif;
+// $baseFontFamily: $avenirLight;
+// $baseHeadingFont: $avenirMedium;
+// $subHeadingFont: $avenirMedium;
+$work_sans: $baseFontFamily;
+
+//$font-awesome: 'FontAwesome';
+$font-awesome: "Font Awesome 5 Free";
+$baseLineHeight: 22px;
+$baseTextColor: #000000;
+
+$primaryColor: #000000;
+$secondaryColor: #d8bb41;
+
+// ==========================================================================
+//  MIN HEIGHT FOR CONTAINER
+//  ==========================================================================
+$min-height-desktop: 85vh;
+$min-height-mobile: 80vh;
+
+// $primary: #015E30;
+// $secondary: #22523A;
+// $lato: 'Lato', sans-serif;
+
+$themeDefault: #f58320;
+$brown: #6b3400;
+$lightGreen: #a8e1bf;
+$darkGreen: #46bc99;
+$borderDefault: #dbe0ff;

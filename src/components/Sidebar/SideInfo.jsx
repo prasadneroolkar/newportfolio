@@ -12,11 +12,11 @@ const SideInfo = () => {
       </figure>
 
       <div className="info-content">
-        <h1 className="name" title="Richard hanrick">
-          Prasad hanrick
+        <h1 className="name" title="Prasad Neroolkar">
+          Prasad Neroolkar
         </h1>
 
-        <p className="title">Web developer</p>
+        <p className="title">Front end developer</p>
       </div>
 
       <button

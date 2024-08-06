@@ -9,7 +9,7 @@ function App() {
       <section id="body">
         <div className="container">
           <div className="row">
-            <div className="col-lg-4 col-12">
+            <div className="col-lg-auto col">
               <Sidebar>
                 <SideInfo />
                 <SidebarContact />

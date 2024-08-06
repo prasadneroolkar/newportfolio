@@ -1,14 +1,14 @@
 import React from "react";
+import myAvatar from "../../assets/images/my-avatar.png";
+import styles from "./Sidebar.module.scss";
 
 const SideInfo = () => {
   return (
-    <div className="sidebar-info">
-      <figure className="avatar-box">
-        <img
-          src="./assets/images/my-avatar.png"
-          alt="Richard hanrick"
-          width="80"
-        />
+    <div
+      className={`${styles.sidebar_info} d-flex justify-content-center align-items-center flex-column text-center`}
+    >
+      <figure className={styles.avatar_box}>
+        <img src={myAvatar} alt="Prasad Neroolkar" />
       </figure>
 
       <div className="info-content">
@@ -19,7 +19,10 @@ const SideInfo = () => {
         <p className="title">Web developer</p>
       </div>
 
-      <button className="info_more-btn btn btn-primary" data-sidebar-btn="">
+      <button
+        className="info_more-btn btn btn-primary d-lg-none"
+        data-sidebar-btn=""
+      >
         <span>Show Contacts</span>
 
         <ion-icon

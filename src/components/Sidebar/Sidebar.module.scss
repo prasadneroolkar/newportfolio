@@ -1,0 +1,16 @@
+.sidebar {
+  max-height: max-content;
+  height: 100%;
+  margin-bottom: 0px;
+  padding-top: 60px;
+  padding-inline: 30px;
+
+
+  .sidebar_info {
+    .avatar_box {
+      border-radius: 25px;
+      background: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
+    }
+  }
+
+}

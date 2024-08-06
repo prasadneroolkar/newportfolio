@@ -15,7 +15,12 @@ body {
   color: #ffffff;
 }
 
-.main_content {
-  border-radius: 25px;
-  border: 1px solid;
+section#body {
+  margin: 100px 0;
+
+  .main_content {
+    border-radius: 25px;
+    border: 1px solid;
+  }
+
 }

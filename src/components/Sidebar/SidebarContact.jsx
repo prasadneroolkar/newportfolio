@@ -3,6 +3,10 @@ import { CiMail } from "react-icons/ci";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { IoCalendarOutline } from "react-icons/io5";
 import { CiLocationOn } from "react-icons/ci";
+import { FaFacebook } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import styles from "./SidebarContact.module.scss";
 
 const SidebarContact = () => {
@@ -25,6 +29,7 @@ const SidebarContact = () => {
             <a
               href="mailto:prasadneroolkar90@gmail.com"
               className={styles.contact_link}
+              title="prasadneroolkar90@gmail.com"
             >
               prasadneroolkar90@gmail.com
             </a>
@@ -87,37 +92,50 @@ const SidebarContact = () => {
 
       <div className="separator"></div>
 
-      <ul className="social-list">
-        <li className="social-item">
-          <a href="#" className="social-link">
-            <ion-icon
+      <ul
+        className="social_list justify-content-center d-flex align-items-center
+justify-content-center d-flex align-items-center gap-3 px-1"
+      >
+        <li className="social_item">
+          <a href="#" className="social_link">
+            <FaFacebook
               name="logo-facebook"
               role="img"
               class="md hydrated"
               aria-label="logo facebook"
-            ></ion-icon>
+            ></FaFacebook>
           </a>
         </li>
 
-        <li className="social-item">
-          <a href="#" className="social-link">
-            <ion-icon
+        <li className="social_item">
+          <a href="#" className="social_link">
+            <FaTwitter
               name="logo-twitter"
               role="img"
               class="md hydrated"
               aria-label="logo twitter"
-            ></ion-icon>
+            ></FaTwitter>
           </a>
         </li>
 
-        <li className="social-item">
-          <a href="#" className="social-link">
-            <ion-icon
+        <li className="social_item ">
+          <a href="#" className="social_link">
+            <FaInstagram
               name="logo-instagram"
               role="img"
               class="md hydrated"
               aria-label="logo instagram"
-            ></ion-icon>
+            ></FaInstagram>
+          </a>
+        </li>
+        <li className="social_item ">
+          <a href="#" className="social_link">
+            <FaLinkedin
+              name="logo-instagram"
+              role="img"
+              class="md hydrated"
+              aria-label="logo instagram"
+            ></FaLinkedin>
           </a>
         </li>
       </ul>

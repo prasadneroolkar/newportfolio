@@ -9,13 +9,13 @@ function App() {
       <section id="body">
         <div className="container">
           <div className="row">
-            <div className="col-lg-auto col">
+            <div className="col-lg-3 col">
               <Sidebar>
                 <SideInfo />
                 <SidebarContact />
               </Sidebar>
             </div>
-            <div className="col-lg-8 col-12">
+            <div className="col-lg-9 col-12">
               <div className="main_content">
                 <header>
                   <nav>

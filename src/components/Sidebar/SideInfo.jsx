@@ -5,19 +5,20 @@ import styles from "./Sidebar.module.scss";
 const SideInfo = () => {
   return (
     <div
-      className={`${styles.sidebar_info} d-flex justify-content-center align-items-center flex-column text-center`}
+      className={`${styles.sidebar_info} d-flex justify-content-center align-items-center flex-column text-center gap-3`}
     >
       <figure className={styles.avatar_box}>
         <img src={myAvatar} alt="Prasad Neroolkar" />
       </figure>
 
-      <div className="info-content">
-        <h1 className="name" title="Prasad Neroolkar">
+      <div className={styles.info_content}>
+        <h1 className={styles.name} title="Prasad Neroolkar">
           Prasad Neroolkar
         </h1>
-
-        <p className="title">Front end developer</p>
+        <p className={styles.title}>Front end developer</p>
       </div>
+
+      <div className={styles.separator}></div>
 
       <button
         className="info_more-btn btn btn-primary d-lg-none"

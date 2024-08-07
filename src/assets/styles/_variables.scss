@@ -4,20 +4,15 @@
 
 // Color variable map
 $colors: ( // non-nested values
-  background: #41873e,
+  bginfo: rgb(30, 41, 59),
   border: #c5c5c5,
   failure: rgba(199, 28, 28, 0.73),
   success: #00ac57,
   warning: #ea9f12,
   white: #ffffff,
-  // nested map inception
+  iconcolor:rgb(125 211 252/1), // nested map inception
   primary: (base: #25408f,
-    black: #000000,
-    orange: #f58320,
-    orange-light: #ffc075,
-    clay-brown: #6b3400,
-    green-trans: #41873e),
-  secondary: (para:#444444,
+    infospan:rgb(148 163 184/1), secondary: (),
   ));
 
 // Usage

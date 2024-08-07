@@ -1,78 +1,86 @@
 import React from "react";
+import { CiMail } from "react-icons/ci";
+import { IoIosPhonePortrait } from "react-icons/io";
+import { IoCalendarOutline } from "react-icons/io5";
+import { CiLocationOn } from "react-icons/ci";
+import styles from "./SidebarContact.module.scss";
 
 const SidebarContact = () => {
   return (
-    <div className="sidebar-info_more">
-      <ul className="contacts-list">
-        <li className="contact-item">
-          <div className="icon-box">
-            <ion-icon
+    <div className={styles.sidebar_info_more}>
+      <ul className={styles.contacts_list}>
+        <li className={styles.contact_item}>
+          <div className={styles.icon_box}>
+            <CiMail
               name="mail-outline"
               role="img"
               class="md hydrated"
               aria-label="mail outline"
-            ></ion-icon>
+            ></CiMail>
           </div>
 
-          <div className="contact-info">
-            <p className="contact-title">Email</p>
+          <div className={styles.contact_info}>
+            <p className={styles.contact_title}>Email</p>
 
-            <a href="mailto:richard@example.com" className="contact-link">
-              richard@example.com
+            <a
+              href="mailto:prasadneroolkar90@gmail.com"
+              className={styles.contact_link}
+            >
+              prasadneroolkar90@gmail.com
             </a>
           </div>
         </li>
 
-        <li className="contact-item">
-          <div className="icon-box">
-            <ion-icon
+        <li className={styles.contact_item}>
+          <div className={styles.icon_box}>
+            <IoIosPhonePortrait
               name="phone-portrait-outline"
               role="img"
               class="md hydrated"
               aria-label="phone portrait outline"
-            ></ion-icon>
+            ></IoIosPhonePortrait>
           </div>
 
-          <div className="contact-info">
-            <p className="contact-title">Phone</p>
+          <div className={styles.contact_info}>
+            <p className={styles.contact_title}>Phone</p>
 
-            <a href="tel:+12133522795" className="contact-link">
-              +1 (213) 352-2795
+            <a href="tel:+917406996770" className={styles.contact_link}>
+              7406996770
             </a>
           </div>
         </li>
 
-        <li className="contact-item">
-          <div className="icon-box">
-            <ion-icon
+        <li className={styles.contact_item}>
+          <div className={styles.icon_box}>
+            <IoCalendarOutline
               name="calendar-outline"
               role="img"
               class="md hydrated"
               aria-label="calendar outline"
-            ></ion-icon>
+            ></IoCalendarOutline>
           </div>
 
-          <div className="contact-info">
-            <p className="contact-title">Birthday</p>
+          <div className={styles.contact_info}>
+            <p className={styles.contact_title}>Birthday</p>
 
-            <time dateTime="1982-06-23">June 23, 1982</time>
+            <time dateTime="1991-08-11">August 11, 1991</time>
           </div>
         </li>
 
-        <li className="contact-item">
-          <div className="icon-box">
-            <ion-icon
+        <li className={styles.contact_item}>
+          <div className={styles.icon_box}>
+            <CiLocationOn
               name="location-outline"
               role="img"
               class="md hydrated"
               aria-label="location outline"
-            ></ion-icon>
+            ></CiLocationOn>
           </div>
 
-          <div className="contact-info">
-            <p className="contact-title">Location</p>
+          <div className={styles.contact_info}>
+            <p className={styles.contact_title}>Location</p>
 
-            <address>Sacramento, California, USA</address>
+            <address>Porvorim, Goa</address>
           </div>
         </li>
       </ul>

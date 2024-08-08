@@ -2,6 +2,7 @@ import { useState } from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
 import SideInfo from "./components/Sidebar/SideInfo";
 import SidebarContact from "./components/Sidebar/SidebarContact";
+import Header from "./components/Header";
 
 function App() {
   return (
@@ -17,24 +18,7 @@ function App() {
             </div>
             <div className="col-lg-9 col-12">
               <div className="main_content">
-                <header>
-                  <nav>
-                    <ul>
-                      <li>
-                        <a href="">About</a>
-                      </li>
-                      <li>
-                        <a href="">Resume</a>
-                      </li>
-                      <li>
-                        <a href="">Portfolio</a>
-                      </li>
-                      <li>
-                        <a href="">Contact</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </header>
+                <Header />
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Quibusdam aperiam commodi quisquam aliquid sequi dolore

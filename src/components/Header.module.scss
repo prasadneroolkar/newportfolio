@@ -1,0 +1,47 @@
+@import '../assets/styles/variables';
+@import '../assets/styles/mixins';
+
+
+header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  nav {
+    padding-inline: 20px;
+    border-radius: 0 20px;
+    border: 1px solid;
+    width: max-content;
+    border: 1px solid hsl(0, 0%, 22%);
+    background-color: color(bg-color);
+    margin-top: -1px;
+
+
+    ul {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 0;
+
+      li {
+
+        .navbar_link {
+          display: inline-block;
+
+          @include font-rem(15px, 21px);
+          font-weight: 500;
+          padding: 20px 7px;
+          // transition: color var(--transition-1);
+
+
+
+          &.active {
+            color: color(link);
+          }
+        }
+
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@ import styles from "./Sidebar.module.scss";
 const SideInfo = () => {
   return (
     <div
-      className={`${styles.sidebar_info} d-flex justify-content-center align-items-center flex-column text-center gap-3`}
+      className={`${styles.sidebar_info} d-flex justify-content-lg-center align-items-center flex-lg-column text-center gap-3`}
     >
       <figure className={styles.avatar_box}>
         <img src={myAvatar} alt="Prasad Neroolkar" />
@@ -18,10 +18,8 @@ const SideInfo = () => {
         <p className={styles.title}>Front end developer</p>
       </div>
 
-      <div className={styles.separator}></div>
-
       <button
-        className="info_more-btn btn btn-primary d-lg-none"
+        className="info_more-btn btn btn-primary d-none"
         data-sidebar-btn=""
       >
         <span>Show Contacts</span>

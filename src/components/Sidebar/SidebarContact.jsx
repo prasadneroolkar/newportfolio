@@ -12,6 +12,7 @@ import styles from "./SidebarContact.module.scss";
 const SidebarContact = () => {
   return (
     <div className={styles.sidebar_info_more}>
+      <div className={styles.separator}></div>
       <ul className={styles.contacts_list}>
         <li className={styles.contact_item}>
           <div className={styles.icon_box}>

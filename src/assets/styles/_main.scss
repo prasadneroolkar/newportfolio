@@ -115,9 +115,9 @@ h1,
 
 h2,
 .h2 {
-  @include font-rem(64px, 70.4px);
-  font-weight: 700;
-  letter-spacing: -1.92px;
+  @include font-rem(32px, 32px);
+  font-weight: 600;
+  // letter-spacing: -1.92px;
 
 
   @include bp(tablet-sm) {
@@ -213,10 +213,12 @@ section#body {
   // mask-image: linear-gradient(to bottom, transparent, black);
 
   .main_content {
+    position: relative;
     border-radius: 25px;
     box-shadow: 0 24px 80px hsla(0, 0%, 0%, 0.25);
     background-color: color(bginfo);
     border: 1px solid hsl(0, 0%, 22%);
+    padding: 30px;
   }
 
 }

@@ -1,0 +1,26 @@
+@import"./assets/styles/variables";
+@import"./assets/styles/mixins";
+
+.pages_content {
+  .article_title {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 5px;
+      background-color: color(link);
+      border-radius: 3px;
+    }
+  }
+
+  p {
+    @include font-rem(15px, 24px);
+    font-weight: 300;
+  }
+}

@@ -4,21 +4,33 @@
 .sidebar {
   max-height: max-content;
   height: 100%;
+
   margin-bottom: 0px;
   padding-top: 60px;
   padding-bottom: 10px;
   padding-inline: 30px;
   box-shadow: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+  transition: 0.5s ease-in-out;
   border-radius: 20px;
   border: 1px solid hsl(0, 0%, 22%);
   background-color: color(bginfo);
 
   @include bp(tablet-sm) {
     padding: 30px;
+    max-height: 180px;
+    overflow: hidden;
+    // max-height: 584px;
     // margin-bottom: 30px;
   }
 
+  &.active {
+    max-height: 584px;
+  }
+
   .sidebar_info {
+
+
+
     .avatar_box {
       border-radius: 25px;
       background-color: color(bg-color);
@@ -63,6 +75,40 @@
 
 
   }
+
+  .info_more_btn {
+    position: relative;
+    border-radius: 0 20px;
+    font-size: 13px;
+    z-index: 1;
+    top: -69px;
+    right: -163px;
+    padding: 10px 15px;
+    color: color(link);
+    box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+    background-color: color(bg-color);
+    border: none;
+
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: inherit;
+      background-color: rgba(56, 189, 248, 0.1019607843);
+      transition: 0.25s ease;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      background: linear-gradient(135deg, hsl(229.29deg 49.45% 50.47% / 52%) 0%, hsl(240.37deg 44.1% 41.97% / 9%) 59.86%), hsl(240deg 5.22% 44.9% / 0%);
+    }
+
+    &:focus::before {
+      background: linear-gradient(135deg, hsl(229.29deg 49.45% 50.47% / 52%) 0%, hsl(240.37deg 44.1% 41.97% / 9%) 59.86%), hsl(240deg 5.22% 44.9% / 0%);
+    }
+  }
+
+
 
   @include bp(tablet-sm) {
     // @include font-rem(14px, 16px);

@@ -1,8 +1,8 @@
-import React from "react";
+import { useState } from "react";
 import myAvatar from "../../assets/images/my-avatar.png";
 import styles from "./Sidebar.module.scss";
 
-const SideInfo = () => {
+const SideInfo = ({ handleShow }) => {
   return (
     <div
       className={`${styles.sidebar_info} d-flex justify-content-lg-center align-items-center flex-lg-column text-center gap-3`}
@@ -19,8 +19,9 @@ const SideInfo = () => {
       </div>
 
       <button
-        className="info_more-btn btn btn-primary d-none"
+        className={`${styles.info_more_btn}  d-lg-none`}
         data-sidebar-btn=""
+        onClick={handleShow}
       >
         <span>Show Contacts</span>
 

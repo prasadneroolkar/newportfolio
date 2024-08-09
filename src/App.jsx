@@ -6,15 +6,20 @@ import Header from "./components/Header";
 import About from "./pages/About";
 
 function App() {
+  const [show, setShow] = useState(false);
+
+  const showBtn = () => {
+    setShow(!show);
+  };
   return (
     <>
       <section id="body">
         <div className="container">
           <div className="row">
             <div className="col-lg-3 col mb-sm-4">
-              <Sidebar>
-                <SideInfo />
-                <SidebarContact />
+              <Sidebar showStatus={show}>
+                <SideInfo handleShow={showBtn} />
+                <SidebarContact disBtn={show} />
               </Sidebar>
             </div>
             <div className="col-lg-9 col-12">

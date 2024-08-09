@@ -213,13 +213,19 @@ section#body {
   // mask-image: linear-gradient(to bottom, transparent, black);
 
   .main_content {
-    position: relative;
+
     border-radius: 25px;
     box-shadow: 0 24px 80px hsla(0, 0%, 0%, 0.25);
     background-color: color(bginfo);
     border: 1px solid hsl(0, 0%, 22%);
     padding: 30px;
+
+    @include bp(tablet-md) {
+      position: relative;
+    }
   }
+
+
 
   @include bp(tablet-sm) {
     // @include font-rem(14px, 16px);

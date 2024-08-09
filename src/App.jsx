@@ -11,7 +11,7 @@ function App() {
       <section id="body">
         <div className="container">
           <div className="row">
-            <div className="col-lg-3 col">
+            <div className="col-lg-3 col mb-sm-4">
               <Sidebar>
                 <SideInfo />
                 <SidebarContact />

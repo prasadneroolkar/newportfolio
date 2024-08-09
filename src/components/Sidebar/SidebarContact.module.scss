@@ -7,6 +7,11 @@
     height: 1px;
     background-color: rgb(51 65 85/1);
     margin: 16px 0;
+
+    @include bp(tablet-sm) {
+      margin: 32px 0;
+
+    }
   }
 
   .contacts_list {
@@ -86,5 +91,12 @@
       }
 
     }
+
+    @include bp(tablet-sm) {
+
+      grid-template-columns: 1fr 1fr;
+      gap: 30px 15px;
+    }
+
   }
 }

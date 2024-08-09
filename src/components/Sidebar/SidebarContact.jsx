@@ -7,6 +7,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import styles from "./SidebarContact.module.scss";
 
 const SidebarContact = () => {
@@ -91,31 +92,30 @@ const SidebarContact = () => {
         </li>
       </ul>
 
-      <div className="separator"></div>
+      <div className={`${styles.separator} d-lg-none`}></div>
 
       <ul
-        className="social_list justify-content-center d-flex align-items-center
-justify-content-center d-flex align-items-center gap-3 px-1"
+        className="social_list justify-content-lg-center d-flex align-items-center
+gap-3 px-1 my-sm-0"
       >
-        <li className="social_item">
+        <li className="social_item ">
           <a href="#" className="social_link">
-            <FaFacebook
-              name="logo-facebook"
+            <FaLinkedin
+              name="logo-instagram"
               role="img"
               class="md hydrated"
-              aria-label="logo facebook"
-            ></FaFacebook>
+              aria-label="logo linkedIn"
+            ></FaLinkedin>
           </a>
         </li>
-
-        <li className="social_item">
+        <li className="social_item ">
           <a href="#" className="social_link">
-            <FaTwitter
-              name="logo-twitter"
+            <FaGithub
+              name="logo-instagram"
               role="img"
               class="md hydrated"
-              aria-label="logo twitter"
-            ></FaTwitter>
+              aria-label="logo github"
+            ></FaGithub>
           </a>
         </li>
 
@@ -129,14 +129,24 @@ justify-content-center d-flex align-items-center gap-3 px-1"
             ></FaInstagram>
           </a>
         </li>
-        <li className="social_item ">
+        <li className="social_item">
           <a href="#" className="social_link">
-            <FaLinkedin
-              name="logo-instagram"
+            <FaFacebook
+              name="logo-facebook"
               role="img"
               class="md hydrated"
-              aria-label="logo instagram"
-            ></FaLinkedin>
+              aria-label="logo facebook"
+            ></FaFacebook>
+          </a>
+        </li>
+        <li className="social_item">
+          <a href="#" className="social_link">
+            <FaTwitter
+              name="logo-twitter"
+              role="img"
+              class="md hydrated"
+              aria-label="logo twitter"
+            ></FaTwitter>
           </a>
         </li>
       </ul>

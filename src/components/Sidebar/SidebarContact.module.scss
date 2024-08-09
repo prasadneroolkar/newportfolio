@@ -3,12 +3,17 @@
 
 .sidebar_info_more {
 
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  @include bp(tablet-sm) {
+  //    opacity: 0;
+   //  transition: opacity 0.5s ease-in-out;
 
-  &.active {
-    opacity: 1;
+   //  &.active {
+   //    opacity: 1;
+   //  }
+
+
   }
+
 
   .separator {
     width: 100%;

@@ -18,7 +18,7 @@ function App() {
           <div className="row">
             <div className="col-lg-3 col mb-sm-4">
               <Sidebar showStatus={show}>
-                <SideInfo handleShow={showBtn} />
+                <SideInfo handleShow={showBtn} checkStatus={show} />
                 <SidebarContact disBtn={show} />
               </Sidebar>
             </div>

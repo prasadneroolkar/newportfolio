@@ -2,7 +2,7 @@ import { useState } from "react";
 import myAvatar from "../../assets/images/my-avatar.png";
 import styles from "./Sidebar.module.scss";
 
-const SideInfo = ({ handleShow }) => {
+const SideInfo = ({ handleShow, checkStatus }) => {
   return (
     <div
       className={`${styles.sidebar_info} d-flex justify-content-lg-center align-items-center flex-lg-column text-center gap-3`}
@@ -23,7 +23,11 @@ const SideInfo = ({ handleShow }) => {
         data-sidebar-btn=""
         onClick={handleShow}
       >
-        <span>Show Contacts</span>
+        {window.matchMedia("(max-width: 480px)") ? (
+          <span> Contacts</span>
+        ) : (
+          <span> Show Contacts</span>
+        )}
 
         <ion-icon
           name="chevron-down"

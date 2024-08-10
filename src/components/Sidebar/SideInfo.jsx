@@ -1,11 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import myAvatar from "../../assets/images/my-avatar.png";
 import styles from "./Sidebar.module.scss";
+import { IoChevronDown } from "react-icons/io5";
 
 const SideInfo = ({ handleShow }) => {
+  const [resize, setResize] = useState(
+    window.matchMedia("(max-width: 480px)").matches
+  );
+
+  const winResize = () => {
+    setResize(window.matchMedia("(max-width: 480px)").matches);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", winResize);
+    return () => {
+      window.removeEventListener("resize", winResize);
+    };
+  }, []);
+
   return (
     <div
-      className={`${styles.sidebar_info} d-flex justify-content-lg-center align-items-center flex-lg-column text-center gap-3`}
+      className={`${styles.sidebar_info} d-flex justify-content-lg-center align-items-center flex-lg-column text-lg-center gap-3`}
     >
       <figure className={styles.avatar_box}>
         <img src={myAvatar} alt="Prasad Neroolkar" />
@@ -23,8 +38,10 @@ const SideInfo = ({ handleShow }) => {
         data-sidebar-btn=""
         onClick={handleShow}
       >
-        {window.matchMedia("(max-width: 480px)") ? (
-          <span> Contacts</span>
+        {resize ? (
+          <span>
+            <IoChevronDown />
+          </span>
         ) : (
           <span> Show Contacts</span>
         )}

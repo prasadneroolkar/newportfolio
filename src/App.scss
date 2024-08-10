@@ -17,10 +17,21 @@
       background-color: color(link);
       border-radius: 3px;
     }
+
+    @include bp(sm) {
+      @include font-rem(24px, 43px);
+      padding-bottom: 7px;
+      margin-bottom: 15px;
+    }
   }
 
   p {
     @include font-rem(15px, 24px);
     font-weight: 300;
+
+    @include bp(sm) {
+      @include font-rem(14px, 22.4px);
+      margin-bottom: 15px;
+    }
   }
 }

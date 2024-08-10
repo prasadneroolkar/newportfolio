@@ -101,7 +101,7 @@ const SidebarContact = ({ disBtn }) => {
 
         <ul
           className="social_list justify-content-lg-center d-flex align-items-center
-gap-3 px-1 my-sm-0"
+gap-3 px-1 mb-0"
         >
           <li className="social_item ">
             <a href="#" className="social_link">

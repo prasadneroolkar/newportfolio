@@ -21,8 +21,10 @@
     background-color: rgb(51 65 85/1);
     margin: 16px 0;
 
-    @include bp(tablet-sm) {
-      margin: 32px 0;
+    @include bp(tablet-sm) {}
+
+    @include bp(sm) {
+      margin: 16px 0;
 
     }
   }
@@ -81,6 +83,8 @@
           @include font-rem(12px, 12px);
           text-transform: uppercase;
           margin-bottom: 2px;
+
+
         }
 
         .contact_link {
@@ -109,6 +113,12 @@
 
       grid-template-columns: 1fr 1fr;
       gap: 30px 15px;
+    }
+
+    @include bp(sm) {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 0;
     }
 
   }

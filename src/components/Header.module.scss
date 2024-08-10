@@ -42,12 +42,20 @@ header {
           &.active {
             color: color(link);
           }
+
+          @include bp(sm) {
+            @include font-rem(14px, 20px);
+          }
         }
 
       }
 
       @include bp(tablet-sm) {
         justify-content: center;
+      }
+
+      @include bp(sm) {
+        gap: 0;
       }
     }
 

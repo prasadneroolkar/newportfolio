@@ -15,7 +15,7 @@
   background-color: color(bginfo);
 
   @include bp(tablet-md) {
-    max-height: 180px;
+    max-height: max-content;
   }
 
   @include bp(tablet-sm) {
@@ -24,15 +24,13 @@
     opacity: 1;
 
 
+
     &.active {
+      display: block;
       max-height: 584px;
     }
 
-    &.hide {
-      max-height: 180px;
-      // opacity: 0;
-      /* Optional: add fade effect */
-    }
+    &.hide {}
   }
 
 
@@ -90,6 +88,7 @@
   }
 
   .info_more_btn {
+    display: none;
     position: relative;
     border-radius: 0 20px;
     font-size: 13px;
@@ -118,6 +117,10 @@
 
     &:focus::before {
       background: linear-gradient(135deg, hsl(229.29deg 49.45% 50.47% / 52%) 0%, hsl(240.37deg 44.1% 41.97% / 9%) 59.86%), hsl(240deg 5.22% 44.9% / 0%);
+    }
+
+    @include bp(tablet-sm) {
+      display: block;
     }
   }
 

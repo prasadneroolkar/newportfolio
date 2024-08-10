@@ -2,16 +2,16 @@
 @import '../../assets/styles/mixins';
 
 .sidebar_info_more {
+  display: block;
 
   @include bp(tablet-sm) {
-  //    opacity: 0;
-   //  transition: opacity 0.5s ease-in-out;
+    display: none;
+    /* Initially hide content on mobile */
 
-   //  &.active {
-   //    opacity: 1;
-   //  }
+    &.visible {
+      display: block;
 
-
+    }
   }
 
 

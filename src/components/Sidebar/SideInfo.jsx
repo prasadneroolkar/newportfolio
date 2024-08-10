@@ -2,7 +2,7 @@ import { useState } from "react";
 import myAvatar from "../../assets/images/my-avatar.png";
 import styles from "./Sidebar.module.scss";
 
-const SideInfo = ({ handleShow, checkStatus }) => {
+const SideInfo = ({ handleShow }) => {
   return (
     <div
       className={`${styles.sidebar_info} d-flex justify-content-lg-center align-items-center flex-lg-column text-center gap-3`}
@@ -19,7 +19,7 @@ const SideInfo = ({ handleShow, checkStatus }) => {
       </div>
 
       <button
-        className={`${styles.info_more_btn}  d-lg-none`}
+        className={`${styles.info_more_btn} `}
         data-sidebar-btn=""
         onClick={handleShow}
       >

@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar/Sidebar";
 import SideInfo from "./components/Sidebar/SideInfo";
 import SidebarContact from "./components/Sidebar/SidebarContact";
 import Header from "./components/Header";
 import About from "./pages/About";
+import Resume from "./pages/Resume";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -26,7 +28,13 @@ function App() {
               <div className="main_content">
                 <Header />
                 <div className="pages_content">
-                  <About pageTitle="About Me" />
+                  <Routes>
+                    <Route index element={<About pageTitle="About Me" />} />
+                    <Route
+                      path="/resume"
+                      element={<Resume pageTitle="Resume" />}
+                    />
+                  </Routes>
                 </div>
               </div>
             </div>

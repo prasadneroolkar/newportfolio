@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import styles from "./Header.module.scss";
 
 const Header = () => {
@@ -7,24 +8,27 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <a href="" className={`${styles.navbar_link} ${styles.active}`}>
+            <NavLink
+              to="/"
+              className={`${styles.navbar_link} ${styles.active}`}
+            >
               About
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="" className={`${styles.navbar_link}`}>
+            <NavLink to="resume" className={`${styles.navbar_link}`}>
               Resume
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="" className={`${styles.navbar_link}`}>
+            <NavLink to="" className={`${styles.navbar_link}`}>
               Portfolio
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="" className={`${styles.navbar_link}`}>
+            <NavLink to="" className={`${styles.navbar_link}`}>
               Contact
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>

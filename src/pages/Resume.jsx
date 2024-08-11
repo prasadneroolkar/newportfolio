@@ -1,11 +1,13 @@
 import React from "react";
-import PageComp from "../components/PageComp";
+import PageComp from "../components/common/PageComp";
+import Timeline from "../components/common/Timeline";
 
 const Resume = ({ pageTitle }) => {
   return (
     <>
       <PageComp Title={pageTitle} />
-      <h2>Hi Resume</h2>
+      <Timeline tlTitle="Education" />
+      <Timeline />
     </>
   );
 };

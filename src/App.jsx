@@ -29,7 +29,7 @@ function App() {
                 <Header />
                 <div className="pages_content">
                   <Routes>
-                    <Route index element={<About pageTitle="About Me" />} />
+                    <Route path="/" element={<About pageTitle="About Me" />} />
                     <Route
                       path="/resume"
                       element={<Resume pageTitle="Resume" />}

@@ -1,4 +1,4 @@
-import PageComp from "../components/PageComp";
+import PageComp from "../components/common/PageComp";
 const About = ({ pageTitle }) => {
   return (
     <>

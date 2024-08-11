@@ -11,6 +11,8 @@ header {
   align-items: center;
 
   nav {
+    z-index: 1;
+    position: relative;
     padding-inline: 20px;
     border-radius: 0 20px;
     border: 1px solid;
@@ -27,14 +29,16 @@ header {
       gap: 30px;
       margin-bottom: 0;
 
+
       li {
+        padding: 20px 7px;
 
         .navbar_link {
           display: inline-block;
 
           @include font-rem(15px, 21px);
           font-weight: 500;
-          padding: 20px 7px;
+          // padding: 20px 7px;
           // transition: color var(--transition-1);
 
 

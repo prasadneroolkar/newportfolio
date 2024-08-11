@@ -2,6 +2,16 @@
 @import"./assets/styles/mixins";
 
 .pages_content {
+  p {
+    @include font-rem(15px, 24px);
+    font-weight: 300;
+
+    @include bp(sm) {
+      @include font-rem(14px, 22.4px);
+      margin-bottom: 15px;
+    }
+  }
+
   .article_title {
     padding-bottom: 20px;
     margin-bottom: 20px;
@@ -25,13 +35,78 @@
     }
   }
 
-  p {
-    @include font-rem(15px, 24px);
-    font-weight: 300;
+  .timeline {
 
-    @include bp(sm) {
-      @include font-rem(14px, 22.4px);
-      margin-bottom: 15px;
+    .title_wrapper {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+
+      .icon_box {
+        position: relative;
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        color: color(iconcolor);
+        z-index: 1;
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 1px;
+          background-color: #38bdf81a;
+          border-radius: inherit;
+          z-index: -1;
+
+        }
+      }
+    }
+
+    ol.timeline_list {
+      margin-left: 32px;
+
+      li.timeline_item {
+        position: relative;
+        margin-bottom: 20px;
+
+        &:not(:last-child):before {
+          position: absolute;
+          content: "";
+          width: 1px;
+          height: calc(100% + 50px);
+          background-color: color(bg-color);
+          top: -26px;
+          left: -40px;
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: color(link);
+          box-shadow: 0 0 0 4px color(bg-color);
+          top: 6px;
+          left: -44px;
+        }
+
+        .timeline_item_title {
+          margin-bottom: 7px;
+        }
+
+        span {
+          @include font-rem(15px, 24px);
+          font-weight: 400;
+          color: color(link);
+        }
+      }
     }
   }
+
 }

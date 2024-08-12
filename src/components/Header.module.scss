@@ -41,11 +41,12 @@ header {
           // padding: 20px 7px;
           // transition: color var(--transition-1);
 
-
-
-          &.active {
-            color: color(link);
+          &:hover,
+          &:focus {
+            color: #a8b2d1;
           }
+
+
 
           @include bp(sm) {
             @include font-rem(14px, 20px);

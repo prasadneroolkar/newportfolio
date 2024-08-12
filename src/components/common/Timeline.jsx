@@ -1,16 +1,7 @@
 import React from "react";
 import { MdOutlineWorkspacePremium } from "react-icons/md";
-import data from "./DataTimeline";
 
-const Timeline = ({ tlTitle }) => {
-  const [
-    {
-      id,
-      compTitle,
-      year: { fromYear, toYear },
-      description,
-    },
-  ] = data;
+const Timeline = ({ tlTitle, data, dataEduc }) => {
   return (
     <>
       <section className="timeline">
@@ -23,15 +14,22 @@ const Timeline = ({ tlTitle }) => {
 
         <ol className="timeline_list">
           {data.map((ele) => (
-            <>
-              <li className="timeline_item" key={ele.id}>
-                <h4 className="h4 timeline_item_title">{ele.compTitle}</h4>
-                <span>
-                  {ele.year.fromYear} - {ele.year.toYear}
+            <li className="timeline_item" key={ele.id}>
+              <h5 className="timeline_item_role">
+                {ele.role || ele.stream}
+                <span className="h4 timeline_item_title">
+                  &nbsp;
+                  {`@ ${ele.compTitle || ele.university}`}
                 </span>
-                <p className="timeline_text">{ele.description}</p>
-              </li>
-            </>
+              </h5>
+
+              <span>
+                {ele.year?.fromYear &&
+                  ele.year?.toYear &&
+                  `${ele.year.fromYear} - ${ele.year.toYear}`}
+              </span>
+              <p className="timeline_text">{ele.description || ele.place}</p>
+            </li>
           ))}
         </ol>
       </section>

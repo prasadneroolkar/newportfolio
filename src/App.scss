@@ -96,8 +96,17 @@
           left: -44px;
         }
 
-        .timeline_item_title {
+        .timeline_item_role {
+          @include font-rem(18px, 24px);
+          font-weight: 500;
           margin-bottom: 7px;
+        }
+
+        .timeline_item_title {
+          @include font-rem(18px, 24px);
+          margin-bottom: 7px;
+          font-weight: 500;
+
         }
 
         span {

@@ -59,4 +59,68 @@ const educationData = [
   },
 ];
 
-export { data, educationData };
+const LogoData = [
+  {
+    id: 1,
+    image: "/src/assets/images/html.svg",
+    alt: "Html",
+  },
+  {
+    id: 2,
+    image: "/src/assets/images/css.svg",
+    alt: "Css",
+  },
+  {
+    id: 3,
+    image: "/src/assets/images/java.svg",
+    alt: "Javascript",
+  },
+  {
+    id: 4,
+    image: "/src/assets/images/react.svg",
+    alt: "Reactjs",
+  },
+  {
+    id: 5,
+    image: "/src/assets/images/sass.svg",
+    alt: "Sass",
+  },
+
+  {
+    id: 6,
+    image: "/src/assets/images/tailwind.svg",
+    alt: "Tailwind",
+  },
+  {
+    id: 7,
+    image: "/src/assets/images/wp.svg",
+    alt: "Wordpress",
+  },
+  {
+    id: 8,
+    image: "/src/assets/images/git.svg",
+    alt: "Git",
+  },
+  {
+    id: 9,
+    image: "/src/assets/images/three.png",
+    alt: "ThreeJs",
+  },
+  {
+    id: 10,
+    image: "/src/assets/images/sql.svg",
+    alt: "Sql Server",
+  },
+  {
+    id: 11,
+    image: "/src/assets/images/web.svg",
+    alt: "Web Pack",
+  },
+  {
+    id: 12,
+    image: "/src/assets/images/npm.svg",
+    alt: "npm",
+  },
+];
+
+export { data, educationData, LogoData };

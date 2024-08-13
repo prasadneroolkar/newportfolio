@@ -10,6 +10,7 @@ header {
   justify-content: end;
   align-items: center;
 
+
   nav {
     z-index: 1;
     position: relative;
@@ -82,6 +83,6 @@ header {
     left: 0;
     right: auto;
     bottom: 0;
-
+    z-index: 1;
   }
 }

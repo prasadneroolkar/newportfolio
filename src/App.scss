@@ -64,6 +64,19 @@
           z-index: -1;
 
         }
+
+        @include bp(sm) {
+          width: 30px;
+          height: 30px;
+        }
+
+        svg {
+          @include bp(sm) {
+
+            width: 16px;
+            height: 16px;
+          }
+        }
       }
     }
 
@@ -82,6 +95,11 @@
           background-color: color(bg-color);
           top: -26px;
           left: -40px;
+
+          @include bp(sm) {
+            left: -31px;
+
+          }
         }
 
         &::after {
@@ -94,12 +112,25 @@
           box-shadow: 0 0 0 4px color(bg-color);
           top: 6px;
           left: -44px;
+
+          @include bp(sm) {
+            width: 6px;
+            height: 6px;
+            left: -33px;
+            top: 10px;
+
+
+          }
         }
 
         .timeline_item_role {
           @include font-rem(18px, 24px);
           font-weight: 500;
           margin-bottom: 7px;
+
+          @include bp(sm) {
+            @include font-rem(16px, 24px);
+          }
         }
 
         .timeline_item_title {
@@ -107,6 +138,9 @@
           margin-bottom: 7px;
           font-weight: 500;
 
+          @include bp(sm) {
+            @include font-rem(16px, 24px);
+          }
         }
 
         span {
@@ -114,6 +148,11 @@
           font-weight: 400;
           color: color(link);
         }
+      }
+
+      @include bp(sm) {
+        margin-left: 45px;
+        padding-left: 0;
       }
     }
   }

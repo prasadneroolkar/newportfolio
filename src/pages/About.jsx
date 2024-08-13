@@ -1,5 +1,7 @@
 import PageComp from "../components/common/PageComp";
 import { LogoData } from "../components/common/DataTimeline";
+import SubSection from "../components/common/SubSection";
+
 const About = ({ pageTitle }) => {
   return (
     <>
@@ -24,9 +26,8 @@ const About = ({ pageTitle }) => {
         </p>
       </section>
 
-      <section className="technical_sec">
-        <h3 className="h3 clients-title">Technical skills</h3>
-        <ul className="logos d-flex align-items-center gap-4 flex-wrap justify-content-center">
+      <SubSection title="Technical skills">
+        <ul className="logos d-flex align-items-center flex-wrap">
           {LogoData.map((elem) => {
             return (
               <>
@@ -37,7 +38,13 @@ const About = ({ pageTitle }) => {
             );
           })}
         </ul>
-      </section>
+      </SubSection>
+
+      <SubSection
+        title="
+        At client side , agency side or as freelancer
+      "
+      ></SubSection>
     </>
   );
 };

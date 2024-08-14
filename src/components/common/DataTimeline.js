@@ -123,4 +123,42 @@ const LogoData = [
   },
 ];
 
-export { data, educationData, LogoData };
+const clientData = [
+  {
+    id: 1,
+    image: "/src/assets/images/client-logo/dmi.svg",
+    alt: "Dmi finance",
+  },
+  {
+    id: 2,
+    image: "/src/assets/images/client-logo/jindal.svg",
+    alt: "jsw",
+  },
+  {
+    id: 3,
+    image: "/src/assets/images/client-logo/pollisetty.svg",
+    alt: "Polisetty",
+  },
+  {
+    id: 4,
+    image: "/src/assets/images/client-logo/screenroot.svg",
+    alt: "screenroot",
+  },
+  {
+    id: 5,
+    image: "/src/assets/images/client-logo/yesbank.png",
+    alt: "yesbank",
+  },
+  {
+    id: 6,
+    image: "/src/assets/images/client-logo/nic.png",
+    alt: "NIC",
+  },
+  {
+    id: 7,
+    image: "/src/assets/images/client-logo/webware.png",
+    alt: "webaware",
+  },
+];
+
+export { data, educationData, LogoData, clientData };

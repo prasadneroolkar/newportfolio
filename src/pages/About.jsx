@@ -1,5 +1,5 @@
 import PageComp from "../components/common/PageComp";
-import { LogoData } from "../components/common/DataTimeline";
+import { LogoData, clientData } from "../components/common/DataTimeline";
 import SubSection from "../components/common/SubSection";
 
 const About = ({ pageTitle }) => {
@@ -27,24 +27,67 @@ const About = ({ pageTitle }) => {
       </section>
 
       <SubSection title="Technical skills">
-        <ul className="logos d-flex align-items-center flex-wrap">
-          {LogoData.map((elem) => {
-            return (
-              <>
-                <li key={elem.id}>
-                  <img src={elem.image} alt={elem.alt} />
-                </li>
-              </>
-            );
-          })}
-        </ul>
+        <div className="marquee">
+          <ul className="logos  ">
+            {LogoData.map((elem) => {
+              return (
+                <>
+                  <li key={elem.id}>
+                    <img src={elem.image} alt={elem.alt} />
+                  </li>
+                </>
+              );
+            })}
+            {LogoData.map((elem) => {
+              return (
+                <>
+                  <li key={elem.id}>
+                    <img src={elem.image} alt={elem.alt} />
+                  </li>
+                </>
+              );
+            })}
+          </ul>
+        </div>
       </SubSection>
 
       <SubSection
+        className="clientSec"
         title="
         At client side , agency side or as freelancer
       "
-      ></SubSection>
+      >
+        <div className="marquee">
+          <ul className="client d-flex align-items-center">
+            {clientData.map((elem) => {
+              return (
+                <>
+                  <li key={elem.id}>
+                    <img
+                      className="logoClient"
+                      src={elem.image}
+                      alt={elem.alt}
+                    />
+                  </li>
+                </>
+              );
+            })}
+            {clientData.map((elem) => {
+              return (
+                <>
+                  <li key={elem.id}>
+                    <img
+                      className="logoClient"
+                      src={elem.image}
+                      alt={elem.alt}
+                    />
+                  </li>
+                </>
+              );
+            })}
+          </ul>
+        </div>
+      </SubSection>
     </>
   );
 };

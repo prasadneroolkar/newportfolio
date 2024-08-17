@@ -291,13 +291,25 @@
         grid-template-columns: repeat(3, 1fr);
         justify-content: center;
         align-items: center;
-        column-gap: 2rem;
+        column-gap: 32px;
+        row-gap: 32px;
 
         li {
           box-shadow: inset 0 1px 0 0 #ffffff0d;
           background-color: #1e293bcc;
-          padding: 1.5rem;
+          padding: 20px;
           border-radius: 1.5rem;
+
+          img {
+            margin-bottom: 24px;
+          }
+
+          a {
+            @include font-rem(14px, 24px);
+            font-weight: 600;
+            display: block;
+
+          }
         }
       }
     }

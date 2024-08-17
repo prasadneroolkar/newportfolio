@@ -8,6 +8,87 @@ const Portfolio = ({ pageTitle }) => {
     setTabs(tb);
   };
 
+  const tabsData = [
+    {
+      id: "all",
+      label: "All",
+      content: [
+        {
+          type: "app",
+          imgSrc: "/src/assets/images/demo.png",
+          description: "App description",
+        },
+        {
+          type: "web",
+          imgSrc: "/src/assets/images/demo.png",
+          description: "Web description",
+        },
+        {
+          type: "web",
+          imgSrc: "/src/assets/images/demo.png",
+          description: "Web description",
+        },
+        {
+          type: "web",
+          imgSrc: "/src/assets/images/demo.png",
+          description: "Web description",
+        },
+      ],
+    },
+    {
+      id: "app",
+      label: "Applications",
+      content: [
+        {
+          type: "app",
+          imgSrc: "/src/assets/images/demo.png",
+          description: "App description",
+        },
+      ],
+    },
+    {
+      id: "web",
+      label: "Web Development",
+      content: [
+        {
+          type: "web",
+          imgSrc: "/src/assets/images/demo.png",
+          description: "Web description",
+        },
+        {
+          type: "web",
+          imgSrc: "/src/assets/images/demo.png",
+          description: "Web description",
+        },
+        {
+          type: "web",
+          imgSrc: "/src/assets/images/demo.png",
+          description: "Web description",
+        },
+      ],
+    },
+  ];
+
+  const renderData = () => {
+    const activeData = tabsData.find((elem) => {
+      return elem.id === tabs;
+    });
+    console.log(activeData);
+    return (
+      <div className="cards">
+        <ul>
+          {activeData.content.map((item, index) => (
+            <li key={index}>
+              <img src={item.imgSrc} alt={item.type} />
+              <a>{item.type}</a>
+              <span>{item.description}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+
   return (
     <>
       <PageComp Title={pageTitle} />
@@ -19,52 +100,7 @@ const Portfolio = ({ pageTitle }) => {
         </ul>
       </div>
 
-      <div className="tab-content">
-        {tabs === "all" ? (
-          <>
-            <div className="cards">
-              <ul>
-                <li>
-                  <img src="/src/assets/images/demo.png" />
-                  <p> App</p>
-                  <span>app desc</span>
-                </li>
-                <li>
-                  <img src="/src/assets/images/demo.png" />
-                  <p> web</p>
-                  <span>web desc</span>
-                </li>
-                <li>
-                  <img src="/src/assets/images/demo.png" />
-                  <p> web</p>
-                  <span>web desc</span>
-                </li>
-                <li>
-                  <img src="/src/assets/images/demo.png" />
-                  <p> web</p>
-                  <span>web desc</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p>app</p>
-            </div>
-            <div>
-              <p>web</p>
-            </div>
-          </>
-        ) : tabs === "app" ? (
-          <div>
-            <p>app</p>
-          </div>
-        ) : tabs === "web" ? (
-          <div>
-            <p>web</p>
-          </div>
-        ) : (
-          ""
-        )}
-      </div>
+      <div className="tab-content">{renderData()}</div>
     </>
   );
 };

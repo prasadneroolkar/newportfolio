@@ -6,6 +6,7 @@ import SidebarContact from "./components/Sidebar/SidebarContact";
 import Header from "./components/Header";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
+import Portfolio from "./pages/Portfolio";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -33,6 +34,10 @@ function App() {
                     <Route
                       path="/resume"
                       element={<Resume pageTitle="Resume" />}
+                    />
+                    <Route
+                      path="/portfolio"
+                      element={<Portfolio pageTitle="Portfolio" />}
                     />
                   </Routes>
                 </div>

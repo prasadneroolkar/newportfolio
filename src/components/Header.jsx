@@ -21,12 +21,12 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="" className={`${styles.navbar_link}`}>
+            <NavLink to="portfolio" className={`${styles.navbar_link}`}>
               Portfolio
             </NavLink>
           </li>
           <li>
-            <NavLink to="" className={`${styles.navbar_link}`}>
+            <NavLink to="contact" className={`${styles.navbar_link}`}>
               Contact
             </NavLink>
           </li>

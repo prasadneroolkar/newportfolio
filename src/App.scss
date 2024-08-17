@@ -271,4 +271,37 @@
     }
   }
 
+  // Styling for portfolio page 
+  .tabs {
+    ul {
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 25px;
+
+      li {}
+    }
+  }
+
+  .tab-content {
+    .cards {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        column-gap: 2rem;
+
+        li {
+          box-shadow: inset 0 1px 0 0 #ffffff0d;
+          background-color: #1e293bcc;
+          padding: 1.5rem;
+          border-radius: 1.5rem;
+        }
+      }
+    }
+  }
+
+
 }

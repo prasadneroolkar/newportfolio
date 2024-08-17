@@ -64,62 +64,74 @@ const LogoData = [
     id: 1,
     image: "/src/assets/images/html.svg",
     alt: "Html",
+    caption: "Html",
   },
   {
     id: 2,
     image: "/src/assets/images/css.svg",
     alt: "Css",
+    caption: "Css",
   },
   {
     id: 3,
     image: "/src/assets/images/java.svg",
     alt: "Javascript",
+    caption: "Javascript",
   },
   {
     id: 4,
     image: "/src/assets/images/react.svg",
     alt: "Reactjs",
+    caption: "React",
   },
   {
     id: 5,
     image: "/src/assets/images/sass.svg",
     alt: "Sass",
+    caption: "Sass",
   },
 
   {
     id: 6,
     image: "/src/assets/images/tailwind.svg",
     alt: "Tailwind",
+    caption: "Tailwind",
   },
   {
     id: 7,
     image: "/src/assets/images/wp.svg",
     alt: "Wordpress",
+    caption: "Wordpress",
   },
   {
     id: 8,
     image: "/src/assets/images/git.svg",
     alt: "Git",
+    caption: "Git",
   },
   {
     id: 9,
     image: "/src/assets/images/three.png",
     alt: "ThreeJs",
+    caption: "Three.js",
   },
   {
     id: 10,
     image: "/src/assets/images/sql.svg",
     alt: "Sql Server",
+    caption: "Sql",
   },
   {
     id: 11,
     image: "/src/assets/images/web.svg",
     alt: "Web Pack",
+    caption: "Webpack",
   },
   {
     id: 12,
     image: "/src/assets/images/npm.svg",
     alt: "npm",
+    caption: "Npm",
   },
 ];
 

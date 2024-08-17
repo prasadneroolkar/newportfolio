@@ -27,28 +27,21 @@ const About = ({ pageTitle }) => {
       </section>
 
       <SubSection title="Technical skills">
-        <div className="marquee">
-          <ul className="logos  ">
-            {LogoData.map((elem) => {
-              return (
-                <>
-                  <li key={elem.id}>
-                    <img src={elem.image} alt={elem.alt} />
-                  </li>
-                </>
-              );
-            })}
-            {LogoData.map((elem) => {
-              return (
-                <>
-                  <li key={elem.id}>
-                    <img src={elem.image} alt={elem.alt} />
-                  </li>
-                </>
-              );
-            })}
-          </ul>
-        </div>
+        <ul className="logos  ">
+          {LogoData.map((elem) => {
+            return (
+              <>
+                <li
+                  key={elem.id}
+                  className="d-flex justify-content-center align-items-center flex-column"
+                >
+                  <img src={elem.image} alt={elem.alt} />
+                  <span>{elem.caption}</span>
+                </li>
+              </>
+            );
+          })}
+        </ul>
       </SubSection>
 
       <SubSection

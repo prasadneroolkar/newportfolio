@@ -173,35 +173,39 @@
 
     margin-bottom: 40px;
 
-    .marquee {
-      mask-image: linear-gradient(var(--mask-direction, to right),
-          hsl(0 0% 0% / 0),
-          hsl(0 0% 0% / 1) 20%,
-          hsl(0 0% 0% / 1) 80%,
-          hsl(0 0% 0% / 0));
-      // position: relative;
-      overflow: hidden;
 
-      ul.logos {
-        display: flex;
-        align-items: center;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        column-gap: 40px;
-        animation: marquee 20s linear infinite;
+    ul.logos {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      column-gap: 20px;
+      row-gap: 20px;
+      // animation: marquee 20s linear infinite;
 
 
-        li {
-          img {
-            max-width: 200px;
-            max-height: 200px;
+      li {
+        background-color: color(bg-color);
+        gap: 10px;
+        border-radius: 10px;
+        padding: 10px;
+        width: 112px;
+        height: auto;
+        @include font-rem(14px, 24px);
+        font-weight: 600;
 
-          }
+        img {
+          width: 48px;
+          height: 48px;
+          max-width: 3rem;
+          max-height: 3rem;
+
         }
-
-
       }
+
+
     }
+
 
 
   }

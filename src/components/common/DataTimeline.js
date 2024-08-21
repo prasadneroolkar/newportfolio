@@ -172,5 +172,84 @@ const clientData = [
     alt: "webaware",
   },
 ];
+const tabsData = [
+  {
+    id: "all",
+    label: "All",
+    content: [
+      {
+        type: "app",
+        imgSrc: "/src/assets/images/demo.png",
+        tile: "abc",
+        description: "description",
+        tech: ["react", "css"],
+      },
+      {
+        type: "web",
+        imgSrc: "/src/assets/images/demo.png",
+        description: "Web description",
+        tile: "abc",
+        tech: ["react", "css"],
+      },
+      {
+        type: "web",
+        imgSrc: "/src/assets/images/demo.png",
+        description: "Web description",
+        tile: "abc",
+        tech: ["react", "css"],
+      },
+      {
+        type: "web",
+        imgSrc: "/src/assets/images/demo.png",
+        description: "Web description",
+        tile: "abc",
+        tech: ["react", "css"],
+      },
+    ],
+  },
+  {
+    id: "app",
+    label: "Applications",
+    content: [
+      {
+        type: "app",
+        imgSrc: "/src/assets/images/demo.png",
+        description: "App description",
+        tile: "abc",
+        tech: ["react", "css"],
+      },
+    ],
+  },
+  {
+    id: "web",
+    label: "Web Development",
+    content: [
+      {
+        type: "web",
+        imgSrc: "/src/assets/images/demo.png",
+        description: "Web description",
+        tile: "abc",
+        tech: ["react", "css"],
+      },
+      {
+        type: "web",
+        imgSrc: "/src/assets/images/demo.png",
+        description: "Web description",
+        tile: "abc",
+        tech: ["react", "css"],
+      },
+      {
+        type: "web",
+        imgSrc: "/src/assets/images/demo.png",
+        description: "Web description",
+        tile: "abc",
+        tech: ["react", "css"],
+      },
+    ],
+  },
+];
 
-export { data, educationData, LogoData, clientData };
+// console.log(tabsData[1].content.tech[1]);
+// console.log(tabsData[0].content[0].tech.split(" "));
+
+export { data, educationData, LogoData, clientData, tabsData };

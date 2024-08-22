@@ -183,8 +183,22 @@ const tabsData = [
         tile: "contact management application",
         tech: ["react", "css"],
       },
+
+      {
+        imgSrc: "/src/assets/images/demo.png",
+        description: "applications",
+        tile: "application",
+        tech: ["react", "css"],
+      },
     ],
   },
+  // {
+  //   id: "app",
+  //   label: "Applications",
+  //   content: [
+
+  //   ],
+  // },
   {
     id: "web",
     label: "Web Development",

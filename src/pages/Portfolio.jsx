@@ -18,10 +18,12 @@ const Portfolio = ({ pageTitle }) => {
             item.content.map((item) => (
               <li key={index}>
                 <a href="#">
-                  <img src={item.imgSrc} alt={item.type} />
-                  <p className="eye">
-                    <FaRegEye />
-                  </p>
+                  <figure className="project_img">
+                    <img src={item.imgSrc} alt={item.type} />
+                    <p className="eye">
+                      <FaRegEye />
+                    </p>
+                  </figure>
                   <div>
                     <p className="cardTitle">{item.tile}</p>
                     <span className="description">{item.description}</span>

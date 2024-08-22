@@ -174,48 +174,12 @@ const clientData = [
 ];
 const tabsData = [
   {
-    id: "all",
-    label: "All",
-    content: [
-      {
-        type: "app",
-        imgSrc: "/src/assets/images/demo.png",
-        tile: "abc",
-        description: "description",
-        tech: ["react", "css"],
-      },
-      {
-        type: "web",
-        imgSrc: "/src/assets/images/demo.png",
-        description: "Web description",
-        tile: "abc",
-        tech: ["react", "css"],
-      },
-      {
-        type: "web",
-        imgSrc: "/src/assets/images/demo.png",
-        description: "Web description",
-        tile: "abc",
-        tech: ["react", "css"],
-      },
-      {
-        type: "web",
-        imgSrc: "/src/assets/images/demo.png",
-        description: "Web description",
-        tile: "abc",
-        tech: ["react", "css"],
-      },
-    ],
-  },
-  {
     id: "app",
     label: "Applications",
     content: [
       {
-        type: "app",
         imgSrc: "/src/assets/images/demo.png",
-        description:
-          "lets you easily add, edit, delete, and organize contacts with a user-friendly interface.",
+        description: "applications",
         tile: "contact management application",
         tech: ["react", "css"],
       },
@@ -226,31 +190,13 @@ const tabsData = [
     label: "Web Development",
     content: [
       {
-        type: "web",
         imgSrc: "/src/assets/images/demo.png",
-        description: "Web description",
-        tile: "abc",
-        tech: ["react", "css"],
-      },
-      {
-        type: "web",
-        imgSrc: "/src/assets/images/demo.png",
-        description: "Web description",
-        tile: "abc",
-        tech: ["react", "css"],
-      },
-      {
-        type: "web",
-        imgSrc: "/src/assets/images/demo.png",
-        description: "Web description",
+        description: "Web Development",
         tile: "abc",
         tech: ["react", "css"],
       },
     ],
   },
 ];
-
-// console.log(tabsData[1].content.tech[1]);
-// console.log(tabsData[0].content[0].tech.split(" "));
 
 export { data, educationData, LogoData, clientData, tabsData };

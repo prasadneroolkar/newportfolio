@@ -214,8 +214,9 @@ const tabsData = [
       {
         type: "app",
         imgSrc: "/src/assets/images/demo.png",
-        description: "App description",
-        tile: "abc",
+        description:
+          "lets you easily add, edit, delete, and organize contacts with a user-friendly interface.",
+        tile: "contact management application",
         tech: ["react", "css"],
       },
     ],

@@ -292,24 +292,46 @@
         grid-template-columns: repeat(3, 1fr);
         justify-content: center;
         align-items: center;
-        column-gap: 32px;
-        row-gap: 32px;
+        gap: 30px;
+
 
         li {
           box-shadow: inset 0 1px 0 0 #ffffff0d;
-          background-color: #1e293bcc;
-          padding: 20px;
-          border-radius: 1.5rem;
+
 
           img {
-            margin-bottom: 24px;
+            margin-bottom: 18px;
+            border-radius: 16px;
+            // width: 260px;
+ // height: 195px;
           }
 
-          a {
-            @include font-rem(14px, 24px);
-            font-weight: 600;
-            display: block;
+          div {
+            padding: 0 10px 10px 10px;
 
+            .cardTitle {
+              @include font-rem(15px, 24px);
+              font-weight: 400;
+              margin-bottom: 0;
+              text-transform: capitalize;
+            }
+
+            .description {
+              @include font-rem(13px, 18px);
+              font-weight: 400;
+              color: color(secondary, font-color);
+            }
+
+            a {
+              @include font-rem(14px, 24px);
+              font-weight: 600;
+              display: block;
+
+            }
+
+            p {
+              span {}
+            }
           }
         }
       }

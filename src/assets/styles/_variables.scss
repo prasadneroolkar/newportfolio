@@ -14,7 +14,10 @@ $colors: ( // non-nested values
   link: rgb(56 189 248/1),
   iconcolor:rgb(125 211 252/1), // nested map inception
   primary: (base: #25408f,
-    infospan:rgb(148 163 184/1), secondary: (),
+    infospan:rgb(148 163 184/1),
+
+  ), secondary: (font-color:rgb(148 163 184 / 1),
+
   ));
 
 // Usage

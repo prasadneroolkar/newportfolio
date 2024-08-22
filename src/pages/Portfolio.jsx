@@ -20,14 +20,16 @@ const Portfolio = ({ pageTitle }) => {
           {activeData.content.map((item, index) => (
             <li key={index}>
               <img src={item.imgSrc} alt={item.type} />
-              <span>{item.description}</span>
-              <a>{item.type}</a>
-              <span>{item.tile}</span>
-              <p>
-                {item.tech.map((elem, index) => (
-                  <span key={index}>{elem}</span>
-                ))}
-              </p>
+              <div>
+                <p className="cardTitle">{item.tile}</p>
+                <span className="description">{item.description}</span>
+                <p>
+                  {item.tech.map((elem, index) => (
+                    <span key={index}>{elem}</span>
+                  ))}
+                </p>
+                <a>{item.type}</a>
+              </div>
             </li>
           ))}
         </ul>

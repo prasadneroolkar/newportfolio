@@ -104,9 +104,13 @@ const SidebarContact = ({ disBtn }) => {
 gap-3 px-1 mb-0"
         >
           <li className="social_item ">
-            <a href="#" className="social_link">
+            <a
+              href="https://www.linkedin.com/in/prasad-neroolkar/"
+              target="_blank"
+              className="social_link"
+            >
               <FaLinkedin
-                name="logo-instagram"
+                name="logo-linkedIn"
                 role="img"
                 className="md hydrated"
                 aria-label="logo linkedIn"
@@ -114,9 +118,13 @@ gap-3 px-1 mb-0"
             </a>
           </li>
           <li className="social_item ">
-            <a href="#" className="social_link">
+            <a
+              href="https://github.com/prasadneroolkar"
+              className="social_link"
+              target="_blank"
+            >
               <FaGithub
-                name="logo-instagram"
+                name="logo-github"
                 role="img"
                 className="md hydrated"
                 aria-label="logo github"
@@ -125,7 +133,11 @@ gap-3 px-1 mb-0"
           </li>
 
           <li className="social_item ">
-            <a href="#" className="social_link">
+            <a
+              href="https://www.instagram.com/d.e.e.p.r.a.a.j/"
+              className="social_link"
+              target="_blank"
+            >
               <FaInstagram
                 name="logo-instagram"
                 role="img"
@@ -135,7 +147,11 @@ gap-3 px-1 mb-0"
             </a>
           </li>
           <li className="social_item">
-            <a href="#" className="social_link">
+            <a
+              href="https://www.facebook.com/prasad.nerulkar/"
+              className="social_link"
+              target="_blank"
+            >
               <FaFacebook
                 name="logo-facebook"
                 role="img"

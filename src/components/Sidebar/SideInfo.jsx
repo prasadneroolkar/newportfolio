@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import myAvatar from "../../assets/images/my-avatar.png";
+import myAvatar from "../../assets/images/pf3.png";
 import styles from "./Sidebar.module.scss";
 import { IoChevronDown } from "react-icons/io5";
 

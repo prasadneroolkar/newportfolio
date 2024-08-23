@@ -19,8 +19,8 @@ const About = ({ pageTitle }) => {
         </p>
 
         <p>
-          Outside of coding,I also love hitting gym to help me feel better and
-          healthier.Traveling is another passion of mine—I enjoy exploring new
+          Outside of coding, I also love hitting gym to help me feel better and
+          healthier. Traveling is another passion of mine—I enjoy exploring new
           places, immersing myself in different cultures and finding inspiration
           in the world around me.
         </p>

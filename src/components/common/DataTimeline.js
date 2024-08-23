@@ -178,16 +178,40 @@ const tabsData = [
     label: "Applications",
     content: [
       {
-        imgSrc: "/src/assets/images/demo.png",
+        imgSrc: "/src/assets/images/search.png",
         description: "applications",
+        link: "https://searchify-app.vercel.app/",
         tile: "contact management application",
         tech: ["react", "css"],
       },
 
       {
-        imgSrc: "/src/assets/images/demo.png",
+        imgSrc: "/src/assets/images/contact.png",
         description: "applications",
         tile: "application",
+        link: "https://contact-app-prasad.vercel.app/",
+        tech: ["react", "css"],
+      },
+
+      {
+        imgSrc: "/src/assets/images/weather.png",
+        description: "applications",
+        tile: "application",
+        link: "https://weather-app-prasad.vercel.app/",
+        tech: ["react", "css"],
+      },
+      {
+        imgSrc: "/src/assets/images/Todo.png",
+        description: "applications",
+        tile: "application",
+        link: "https://todo-app-prasad.vercel.app/",
+        tech: ["react", "css"],
+      },
+      {
+        imgSrc: "/src/assets/images/tictac.png",
+        description: "applications",
+        tile: "application",
+        link: "https://tictactoe-eta-prasad.vercel.app/",
         tech: ["react", "css"],
       },
     ],
@@ -204,9 +228,25 @@ const tabsData = [
     label: "Web Development",
     content: [
       {
-        imgSrc: "/src/assets/images/demo.png",
+        imgSrc: "/src/assets/images/oldportfolio.png",
         description: "Web Development",
         tile: "abc",
+        link: "https://prasad-neroolkar.netlify.app/",
+        tech: ["react", "css"],
+      },
+      {
+        imgSrc: "/src/assets/images/food.png",
+        description: "Web Development",
+        tile: "abc",
+        link: "https://food2eat.netlify.app/",
+        tech: ["react", "css"],
+      },
+
+      {
+        imgSrc: "/src/assets/images/trek.png",
+        description: "Web Development",
+        tile: "abc",
+        link: "https://trek-it.netlify.app/",
         tech: ["react", "css"],
       },
     ],

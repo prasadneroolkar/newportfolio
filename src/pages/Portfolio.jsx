@@ -17,7 +17,7 @@ const Portfolio = ({ pageTitle }) => {
           {tabsData.map((item, index) =>
             item.content.map((item) => (
               <li key={index}>
-                <a href="#">
+                <a href={item.link} target="blank">
                   <figure className="project_img">
                     <img src={item.imgSrc} alt={item.type} />
                     <p className="eye">
@@ -56,7 +56,7 @@ const Portfolio = ({ pageTitle }) => {
           <ul>
             {activeData.content.map((item, index) => (
               <li key={index}>
-                <a href="#">
+                <a href={item.link} target="blank">
                   <figure className="project_img">
                     <img src={item.imgSrc} alt={item.type} />
                     <p className="eye">

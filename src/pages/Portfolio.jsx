@@ -27,7 +27,7 @@ const Portfolio = ({ pageTitle }) => {
                   <div>
                     <p className="cardTitle">{item.tile}</p>
                     <span className="description">{item.description}</span>
-                    <p>
+                    <p className="techDetails">
                       {item.tech.map((elem, index) => (
                         <span key={index}>{elem}</span>
                       ))}
@@ -56,17 +56,24 @@ const Portfolio = ({ pageTitle }) => {
           <ul>
             {activeData.content.map((item, index) => (
               <li key={index}>
-                <img src={item.imgSrc} alt={item.type} />
-                <div>
-                  <p className="cardTitle">{item.tile}</p>
-                  <span className="description">{item.description}</span>
-                  <p>
-                    {item.tech.map((elem, index) => (
-                      <span key={index}>{elem}</span>
-                    ))}
-                  </p>
-                  <a>{item.type}</a>
-                </div>
+                <a href="#">
+                  <figure className="project_img">
+                    <img src={item.imgSrc} alt={item.type} />
+                    <p className="eye">
+                      <FaRegEye />
+                    </p>
+                  </figure>
+                  <div>
+                    <p className="cardTitle">{item.tile}</p>
+                    <span className="description">{item.description}</span>
+                    <p className="techDetails">
+                      {item.tech.map((elem, index) => (
+                        <span key={index}>{elem}</span>
+                      ))}
+                    </p>
+                    <a>{item.type}</a>
+                  </div>
+                </a>
               </li>
             ))}
           </ul>

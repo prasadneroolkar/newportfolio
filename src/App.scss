@@ -478,20 +478,31 @@
     animation: fade 0.5s ease backwards;
     border-radius: 16px;
     height: 380px;
+    margin-bottom: 30px;
 
+    figure {
+      height: 100%;
 
+      iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        filter: grayscale(0.9) invert(1);
+      }
+    }
 
+    @include bp(sm) {
+      height: 250px;
 
-    iframe {
-      display: block;
-      width: 100%;
-      height: 380px;
-      border-radius: 16px;
-      filter: grayscale(0.9) invert(1);
     }
   }
 
   .contact-form {
+    h3 {
+      margin-bottom: 20px;
+    }
+
     form {
 
       input,
@@ -503,21 +514,33 @@
         border-radius: 14px;
         outline: none;
         padding: 15px 20px;
-
-
+        color: color(fontcolor);
       }
 
       .input-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 30px;
+        gap: 25px;
         margin-bottom: 30px;
 
         .form-input {
-          color: inherit;
+          // color: inherit;
           @include font-rem(15px, 24px);
           font-weight: 400;
           padding: 15px 20px;
+
+          &:focus {
+            border-color: color(iconcolor)
+          }
+
+          @include bp(sm) {
+            padding: 13px 20px;
+
+          }
+        }
+
+        @include bp(sm) {
+          grid-template-columns: 1fr;
 
         }
       }
@@ -528,26 +551,34 @@
         max-height: 200px;
         resize: vertical;
         margin-bottom: 25px;
+
+        &:focus {
+          border-color: color(iconcolor)
+        }
       }
 
       .form-btn {
         position: relative;
-        width: 100%;
-        background: var(--border-gradient-onyx);
-        color: var(--orange-yellow-crayola);
+        color: color(iconcolor);
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 10px;
         padding: 13px 20px;
         border-radius: 14px;
-        font-size: var(--fs-6);
+        background-color: color(bg-color);
         text-transform: capitalize;
-        box-shadow: var(--shadow-3);
-        z-index: 1;
+        // box-shadow: var(--shadow-3);
+        z-index: 0;
         transition: all 0.25s ease;
         width: max-content;
         margin-left: auto;
+
+        @include bp(sm) {
+          width: 100%;
+
+
+        }
       }
 
     }

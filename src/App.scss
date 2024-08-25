@@ -472,4 +472,87 @@
   }
 
 
+  // styling for contactus Page
+
+  section.mapbox {
+    animation: fade 0.5s ease backwards;
+    border-radius: 16px;
+    height: 380px;
+
+
+
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 380px;
+      border-radius: 16px;
+      filter: grayscale(0.9) invert(1);
+    }
+  }
+
+  .contact-form {
+    form {
+
+      input,
+      textarea {
+        display: block;
+        width: 100%;
+        background: none;
+        border: 1px solid color(bordercolor);
+        border-radius: 14px;
+        outline: none;
+        padding: 15px 20px;
+
+
+      }
+
+      .input-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 30px;
+
+        .form-input {
+          color: inherit;
+          @include font-rem(15px, 24px);
+          font-weight: 400;
+          padding: 15px 20px;
+
+        }
+      }
+
+      textarea.form-input {
+        min-height: 100px;
+        height: 120px;
+        max-height: 200px;
+        resize: vertical;
+        margin-bottom: 25px;
+      }
+
+      .form-btn {
+        position: relative;
+        width: 100%;
+        background: var(--border-gradient-onyx);
+        color: var(--orange-yellow-crayola);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 13px 20px;
+        border-radius: 14px;
+        font-size: var(--fs-6);
+        text-transform: capitalize;
+        box-shadow: var(--shadow-3);
+        z-index: 1;
+        transition: all 0.25s ease;
+        width: max-content;
+        margin-left: auto;
+      }
+
+    }
+  }
+
+
+
 }

@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
 import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -38,6 +39,10 @@ function App() {
                     <Route
                       path="/portfolio"
                       element={<Portfolio pageTitle="Portfolio" />}
+                    />
+                    <Route
+                      path="/Contact"
+                      element={<Contact pageTitle="Contact" />}
                     />
                   </Routes>
                 </div>

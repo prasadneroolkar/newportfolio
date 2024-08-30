@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PageComp from "../components/common/PageComp";
 import { FiSend } from "react-icons/fi";
 
@@ -6,6 +6,7 @@ const Contact = ({ pageTitle }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
+  const [error, setError] = useState({});
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -18,21 +19,39 @@ const Contact = ({ pageTitle }) => {
   };
 
   const validateForm = () => {
-    let isValid = true;
+    // let isValid = true;
+    let errors = {};
+    const namePattern = /^[a-zA-Z\s]{2,}$/;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
     if (name === "") {
-      console.log("eroor ");
-      isValid = false;
+      errors.name = "Username is required!";
+    } else if (!namePattern.test(name)) {
+      errors.name = "Name must be at least 2 characters";
+    }
+    if (email === "") {
+      errors.email = "Email is required!";
+    } else if (!emailPattern.test(email)) {
+      errors.email = "Enter a valid email";
+    }
+    if (address === "") {
+      errors.address = "Address is required!";
     }
 
-    return isValid;
+    return errors;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      console.log("form is submitting ");
+    setError(validateForm());
+    if (Object.keys(validateForm()).length === 0) {
+      console.log("Form is valid, submitting...");
+      setName("");
+      setAddress("");
+      setEmail("");
+      // Proceed with form submission or other actions
     } else {
-      console.log("form is not submiiting");
+      console.log("Form validation failed.");
     }
   };
 
@@ -57,35 +76,51 @@ const Contact = ({ pageTitle }) => {
 
         <form action="#" className="form" data-form onSubmit={handleSubmit}>
           <div className="input-wrapper">
-            <input
-              type="text"
-              value={name}
-              name="fullname"
-              className="form-input"
-              placeholder="Full name"
-              data-form-input
-              onChange={handleName}
-            />
-
-            <input
-              type="email"
-              name="email"
-              value={email}
-              className="form-input"
-              placeholder="Email address"
-              data-form-input
-              onChange={handleEmail}
-            />
+            <div className="fields">
+              <input
+                type="text"
+                value={name}
+                name="fullname"
+                className="form-input"
+                placeholder="Full name"
+                data-form-input
+                autoComplete="off"
+                onChange={handleName}
+              />
+              {error.name && (
+                <span className={error ? "errorMsg" : ""}>{error.name}</span>
+              )}
+            </div>
+            <div className="fields">
+              <input
+                type="email"
+                name="email"
+                value={email}
+                className="form-input"
+                placeholder="Email address"
+                autoComplete="off"
+                data-form-input
+                onChange={handleEmail}
+              />
+              {error.email && (
+                <span className={error ? "errorMsg" : ""}>{error.email}</span>
+              )}
+            </div>
           </div>
-
-          <textarea
-            name="message"
-            value={address}
-            className="form-input"
-            placeholder="Your Message"
-            data-form-input
-            onChange={handleAdd}
-          ></textarea>
+          <div className="fields">
+            <textarea
+              name="message"
+              value={address}
+              className="form-input"
+              placeholder="Your Message"
+              data-form-input
+              autoComplete="off"
+              onChange={handleAdd}
+            ></textarea>
+            {error.address && (
+              <span className={error ? "errorMsg" : ""}>{error.address}</span>
+            )}
+          </div>
 
           <button className="form-btn" type="submit" data-form-btn>
             <FiSend />

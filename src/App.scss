@@ -552,7 +552,7 @@
         height: 120px;
         max-height: 200px;
         resize: vertical;
-        margin-bottom: 25px;
+        // margin-bottom: 25px;
 
         &:focus {
           border-color: color(iconcolor)
@@ -584,6 +584,13 @@
         }
       }
 
+    }
+
+    span.errorMsg {
+      color: red;
+      margin-top: 10px;
+      padding-left: 5px;
+      display: inline-block;
     }
   }
 

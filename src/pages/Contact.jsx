@@ -17,6 +17,25 @@ const Contact = ({ pageTitle }) => {
     setAddress(e.target.value);
   };
 
+  const validateForm = () => {
+    let isValid = true;
+    if (name === "") {
+      console.log("eroor ");
+      isValid = false;
+    }
+
+    return isValid;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      console.log("form is submitting ");
+    } else {
+      console.log("form is not submiiting");
+    }
+  };
+
   return (
     <>
       <PageComp Title={pageTitle} />
@@ -36,7 +55,7 @@ const Contact = ({ pageTitle }) => {
       <section className="contact-form">
         {/* <h3 className="h3 form-title">Contact Form</h3> */}
 
-        <form action="#" className="form" data-form>
+        <form action="#" className="form" data-form onSubmit={handleSubmit}>
           <div className="input-wrapper">
             <input
               type="text"

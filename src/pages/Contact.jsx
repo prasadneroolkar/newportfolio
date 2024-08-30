@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import PageComp from "../components/common/PageComp";
 import { FiSend } from "react-icons/fi";
 
 const Contact = ({ pageTitle }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+
+  const handleName = (e) => {
+    setName(e.target.value);
+  };
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const handleAdd = (e) => {
+    setAddress(e.target.value);
+  };
+
   return (
     <>
       <PageComp Title={pageTitle} />
@@ -26,32 +40,35 @@ const Contact = ({ pageTitle }) => {
           <div className="input-wrapper">
             <input
               type="text"
+              value={name}
               name="fullname"
               className="form-input"
               placeholder="Full name"
-              required
               data-form-input
+              onChange={handleName}
             />
 
             <input
               type="email"
               name="email"
+              value={email}
               className="form-input"
               placeholder="Email address"
-              required
               data-form-input
+              onChange={handleEmail}
             />
           </div>
 
           <textarea
             name="message"
+            value={address}
             className="form-input"
             placeholder="Your Message"
-            required
             data-form-input
+            onChange={handleAdd}
           ></textarea>
 
-          <button className="form-btn" type="submit" disabled data-form-btn>
+          <button className="form-btn" type="submit" data-form-btn>
             <FiSend />
             <span>Send Message</span>
           </button>

@@ -488,7 +488,7 @@
         width: 100%;
         height: 100%;
         border-radius: 16px;
-        filter: grayscale(0.9) invert(1);
+        filter: opacity(0.5);
       }
     }
 
@@ -499,6 +499,8 @@
   }
 
   .contact-form {
+    animation: fade 0.5s ease backwards;
+
     h3 {
       margin-bottom: 20px;
     }
@@ -558,6 +560,7 @@
       }
 
       .form-btn {
+        outline-style: unset;
         position: relative;
         color: color(iconcolor);
         display: flex;

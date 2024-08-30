@@ -35,7 +35,7 @@ const Contact = ({ pageTitle }) => {
       errors.email = "Enter a valid email";
     }
     if (address === "") {
-      errors.address = "Address is required!";
+      errors.address = "Message is required!";
     }
 
     return errors;

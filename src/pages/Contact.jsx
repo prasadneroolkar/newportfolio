@@ -60,6 +60,7 @@ const Contact = ({ pageTitle }) => {
       )
       .then((response) => {
         console.log("Email sent successfully!", response.status, response.text);
+        setPopup(true);
       })
       .catch((err) => {
         console.error("Error sending email:", err);
@@ -182,9 +183,12 @@ const Contact = ({ pageTitle }) => {
           </button>
         </form>
       </section>
-      {/* <Greeting /> */}
 
-      {popup && <></>}
+      {popup && (
+        <>
+          <Greeting />
+        </>
+      )}
     </>
   );
 };

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useRef } from "react";
 import PageComp from "../components/common/PageComp";
 import Greeting from "../components/Greeting";
+import emailjs from "@emailjs/browser";
 import { FiSend } from "react-icons/fi";
 
 const Contact = ({ pageTitle }) => {
@@ -9,6 +11,8 @@ const Contact = ({ pageTitle }) => {
   const [address, setAddress] = useState("");
   const [error, setError] = useState({});
   const [popup, setPopup] = useState(false);
+
+  const form = useRef();
 
   const handleName = (e) => {
     const namePattern = /^[a-zA-Z\s]*$/;
@@ -44,34 +48,52 @@ const Contact = ({ pageTitle }) => {
     return errors;
   };
 
-  const formSend = async (e) => {
-    const formData = new FormData(e.target);
-
-    formData.append("access_key", "328e4b3f-3fbf-47b2-8b0c-f513cd6131f3");
-
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    }).then((res) => res.json());
-
-    if (res.success) {
-      console.log("Success", res);
-      setPopup(true);
-    }
+  const formEmail = () => {
+    emailjs
+      .sendForm(
+        "service_nn5din8", // Replace with your Service ID
+        "template_43q5rni", // Replace with your Template ID
+        form.current,
+        {
+          publicKey: "user_j1bkpNalp2j5qXYblCH2H", // Replace with your User ID
+        }
+      )
+      .then((response) => {
+        console.log("Email sent successfully!", response.status, response.text);
+      })
+      .catch((err) => {
+        console.error("Error sending email:", err);
+      });
   };
+  // const formSend = async (e) => {
+  //   const formData = new FormData(e.target);
 
-  const handleSubmit = async (e) => {
+  //   formData.append("access_key", "328e4b3f-3fbf-47b2-8b0c-f513cd6131f3");
+
+  //   const object = Object.fromEntries(formData);
+  //   const json = JSON.stringify(object);
+
+  //   const res = await fetch("https://api.web3forms.com/submit", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //     },
+  //     body: json,
+  //   }).then((res) => res.json());
+
+  //   if (res.success) {
+  //     console.log("Success", res);
+  //     setPopup(true);
+  //   }
+  // };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     setError(validateForm());
     if (Object.keys(validateForm()).length === 0) {
-      await formSend(e);
+      // await formSend(e);
+      formEmail();
       setName("");
       setAddress("");
       setEmail("");
@@ -105,13 +127,14 @@ const Contact = ({ pageTitle }) => {
           data-form
           onSubmit={handleSubmit}
           method="POST"
+          ref={form}
         >
           <div className="input-wrapper">
             <div className="fields">
               <input
                 type="text"
                 value={name}
-                name="fullname"
+                name="from_name"
                 className="form-input"
                 placeholder="Full name"
                 data-form-input
@@ -125,7 +148,7 @@ const Contact = ({ pageTitle }) => {
             <div className="fields">
               <input
                 type="email"
-                name="email"
+                name="from_email"
                 value={email}
                 className="form-input"
                 placeholder="Email address"
@@ -159,7 +182,7 @@ const Contact = ({ pageTitle }) => {
           </button>
         </form>
       </section>
-      <Greeting />
+      {/* <Greeting /> */}
 
       {popup && <></>}
     </>

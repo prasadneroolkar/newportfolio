@@ -608,7 +608,7 @@
     }
   }
 
-  .greetings {
+  .greetings-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -619,6 +619,8 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    flex-direction: column;
+
     // left: auto;
     // top: 50%;
     // margin: 0 auto;
@@ -626,6 +628,13 @@
     // right: auto;
     // bottom: auto;
     // z-index: 1;
+    .greetings {
+      background-color: color(bg-color);
+
+      p:first-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
 

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PageComp from "../components/common/PageComp";
+import Greeting from "../components/Greeting";
 import { FiSend } from "react-icons/fi";
 
 const Contact = ({ pageTitle }) => {
@@ -7,19 +8,19 @@ const Contact = ({ pageTitle }) => {
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
   const [error, setError] = useState({});
+  const [popup, setPopup] = useState(false);
 
   const handleName = (e) => {
     const namePattern = /^[a-zA-Z\s]*$/;
-    // setName(e.target.value);
     if (e.target.value === "" || namePattern.test(e.target.value)) {
       setName(e.target.value.trimStart());
     }
   };
   const handleEmail = (e) => {
-    setEmail(e.target.value);
+    setEmail(e.target.value.trimStart());
   };
   const handleAdd = (e) => {
-    setAddress(e.target.value);
+    setAddress(e.target.value.trimStart());
   };
 
   const validateForm = () => {
@@ -43,15 +44,37 @@ const Contact = ({ pageTitle }) => {
     return errors;
   };
 
-  const handleSubmit = (e) => {
+  const formSend = async (e) => {
+    const formData = new FormData(e.target);
+
+    formData.append("access_key", "328e4b3f-3fbf-47b2-8b0c-f513cd6131f3");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+      setPopup(true);
+    }
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError(validateForm());
     if (Object.keys(validateForm()).length === 0) {
-      console.log("Form is valid, submitting...");
+      await formSend(e);
       setName("");
       setAddress("");
       setEmail("");
-      // Proceed with form submission or other actions
     } else {
       console.log("Form validation failed.");
     }
@@ -76,7 +99,13 @@ const Contact = ({ pageTitle }) => {
       <section className="contact-form">
         {/* <h3 className="h3 form-title">Contact Form</h3> */}
 
-        <form action="#" className="form" data-form onSubmit={handleSubmit}>
+        <form
+          action="#"
+          className="form"
+          data-form
+          onSubmit={handleSubmit}
+          method="POST"
+        >
           <div className="input-wrapper">
             <div className="fields">
               <input
@@ -130,6 +159,9 @@ const Contact = ({ pageTitle }) => {
           </button>
         </form>
       </section>
+      <Greeting />
+
+      {popup && <></>}
     </>
   );
 };

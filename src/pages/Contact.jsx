@@ -11,6 +11,7 @@ const Contact = ({ pageTitle }) => {
   const [address, setAddress] = useState("");
   const [error, setError] = useState({});
   const [popup, setPopup] = useState(false);
+  const [errorPop, setErrorPop] = useState(false);
 
   const form = useRef();
 
@@ -64,6 +65,7 @@ const Contact = ({ pageTitle }) => {
       })
       .catch((err) => {
         console.error("Error sending email:", err);
+        setErrorPop(true);
       });
   };
   // const formSend = async (e) => {
@@ -93,7 +95,6 @@ const Contact = ({ pageTitle }) => {
     e.preventDefault();
     setError(validateForm());
     if (Object.keys(validateForm()).length === 0) {
-      // await formSend(e);
       formEmail();
       setName("");
       setAddress("");
@@ -186,8 +187,31 @@ const Contact = ({ pageTitle }) => {
 
       {popup && (
         <>
-          <Greeting />
+          <Greeting
+            msg="Thank You!"
+            description={
+              <>
+                Your message has been successfully sent. <br />
+                We will get back to you as soon as possible
+              </>
+            }
+            imgSrc={popup}
+          />
         </>
+      )}
+
+      {errorPop && (
+        <Greeting
+          msg="Error!"
+          description={
+            <>
+              Error sending email.
+              <br />
+              Please try again later.
+            </>
+          }
+          imgSrc={false}
+        />
       )}
     </>
   );

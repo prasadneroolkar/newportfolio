@@ -1,28 +1,31 @@
 import React, { useState } from "react";
 import thanks from "../assets/images/thanks.png";
+import error from "../assets/images/error.png";
+
 import { IoMdClose } from "react-icons/io";
 
-const Greeting = () => {
+const Greeting = ({ msg, description, imgSrc }) => {
   const [close, setClose] = useState(false);
-
+  console.log(imgSrc);
   const handleClose = () => {
     setClose(true);
   };
   return (
-    <div className={`greetings-overlay ${close && "hide"}`}>
-      <div className="greetings">
-        <span className="closeBtn" onClick={handleClose}>
-          <IoMdClose />
-        </span>
+    <>
+      {!close && (
+        <div className="greetings-overlay">
+          <div className="greetings">
+            <span className="closeBtn" onClick={handleClose}>
+              <IoMdClose />
+            </span>
 
-        <img src={thanks} alt="ThankYou" />
-        <p>Thank You!</p>
-        <p>
-          Your message has been successfully sent. <br />
-          We will get back to you as soon as possible
-        </p>
-      </div>
-    </div>
+            <img src={`${imgSrc === true ? thanks : error}`} alt={msg} />
+            <p>{msg}</p>
+            <p>{description}</p>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

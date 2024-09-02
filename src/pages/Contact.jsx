@@ -9,7 +9,11 @@ const Contact = ({ pageTitle }) => {
   const [error, setError] = useState({});
 
   const handleName = (e) => {
-    setName(e.target.value);
+    const namePattern = /^[a-zA-Z\s]*$/;
+    // setName(e.target.value);
+    if (e.target.value === "" || namePattern.test(e.target.value)) {
+      setName(e.target.value.trimStart());
+    }
   };
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -21,14 +25,12 @@ const Contact = ({ pageTitle }) => {
   const validateForm = () => {
     // let isValid = true;
     let errors = {};
-    const namePattern = /^[a-zA-Z\s]{2,}$/;
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     if (name === "") {
       errors.name = "Username is required!";
-    } else if (!namePattern.test(name)) {
-      errors.name = "Name must be at least 2 characters";
     }
+
     if (email === "") {
       errors.email = "Email is required!";
     } else if (!emailPattern.test(email)) {

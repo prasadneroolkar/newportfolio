@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRef } from "react";
 import PageComp from "../components/common/PageComp";
 import Greeting from "../components/Greeting";
@@ -104,6 +104,11 @@ const Contact = ({ pageTitle }) => {
     }
   };
 
+  const closePopup = () => {
+    setErrorPop(false);
+    setPopup(false);
+  };
+
   return (
     <>
       <PageComp Title={pageTitle} />
@@ -196,6 +201,7 @@ const Contact = ({ pageTitle }) => {
               </>
             }
             imgSrc={popup}
+            onClose={closePopup}
           />
         </>
       )}
@@ -211,6 +217,7 @@ const Contact = ({ pageTitle }) => {
             </>
           }
           imgSrc={false}
+          onClose={closePopup}
         />
       )}
     </>

@@ -4,11 +4,12 @@ import error from "../assets/images/error.png";
 
 import { IoMdClose } from "react-icons/io";
 
-const Greeting = ({ msg, description, imgSrc }) => {
+const Greeting = ({ msg, description, imgSrc, onClose }) => {
   const [close, setClose] = useState(false);
-  console.log(imgSrc);
+  // console.log(imgSrc);
   const handleClose = () => {
     setClose(true);
+    onClose();
   };
   return (
     <>

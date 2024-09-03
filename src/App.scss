@@ -622,9 +622,6 @@
     z-index: 1000;
     flex-direction: column;
 
-
-
-
     .greetings {
       position: relative;
       border-radius: 25px;
@@ -657,8 +654,6 @@
 
       @include bp(sm) {
         max-width: 90%;
-
-
       }
     }
 

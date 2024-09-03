@@ -20,7 +20,7 @@ function App() {
       <section id="body">
         <div className="container">
           <div className="row">
-            <div className="col-lg-3 col mb-lg-0 mb-4">
+            <div className="col-lg-3 col mb-lg-0 mb-4 divFixed">
               <Sidebar showStatus={show}>
                 <SideInfo handleShow={showBtn} />
                 <SidebarContact disBtn={show} />

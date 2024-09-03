@@ -59,7 +59,7 @@ const Contact = ({ pageTitle }) => {
           publicKey: "user_j1bkpNalp2j5qXYblCH2H", // Replace with your User ID
         }
       )
-      .then((response) => {
+      .then((respodnse) => {
         console.log("Email sent successfully!", response.status, response.text);
         setPopup(true);
       })

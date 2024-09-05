@@ -220,6 +220,17 @@
           max-height: 3rem;
 
         }
+
+        @include bp(sm) {
+          @include font-rem(12px, 22px);
+          width: 92px;
+        }
+
+        @media screen and (max-width: 375px) {
+
+          @include font-rem(12px, 22px);
+          width: 92px;
+        }
       }
 
 

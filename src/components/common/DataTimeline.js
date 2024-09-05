@@ -62,74 +62,74 @@ const educationData = [
 const LogoData = [
   {
     id: 1,
-    image: "/src/assets/images/html.svg",
+    image: "/images/html.svg",
     alt: "Html",
     caption: "Html",
   },
   {
     id: 2,
-    image: "/src/assets/images/css.svg",
+    image: "/images/css.svg",
     alt: "Css",
     caption: "Css",
   },
   {
     id: 3,
-    image: "/src/assets/images/java.svg",
+    image: "/images/java.svg",
     alt: "Javascript",
     caption: "Javascript",
   },
   {
     id: 4,
-    image: "/src/assets/images/react.svg",
+    image: "/images/react.svg",
     alt: "Reactjs",
     caption: "React",
   },
   {
     id: 5,
-    image: "/src/assets/images/sass.svg",
+    image: "/images/sass.svg",
     alt: "Sass",
     caption: "Sass",
   },
 
   {
     id: 6,
-    image: "/src/assets/images/tailwind.svg",
+    image: "/images/tailwind.svg",
     alt: "Tailwind",
     caption: "Tailwind",
   },
   {
     id: 7,
-    image: "/src/assets/images/wp.svg",
+    image: "/images/wp.svg",
     alt: "Wordpress",
     caption: "Wordpress",
   },
   {
     id: 8,
-    image: "/src/assets/images/git.svg",
+    image: "/images/git.svg",
     alt: "Git",
     caption: "Git",
   },
   {
     id: 9,
-    image: "/src/assets/images/three.png",
+    image: "/images/three.png",
     alt: "ThreeJs",
     caption: "Three.js",
   },
   {
     id: 10,
-    image: "/src/assets/images/sql.svg",
+    image: "/images/sql.svg",
     alt: "Sql Server",
     caption: "Sql",
   },
   {
     id: 11,
-    image: "/src/assets/images/web.svg",
+    image: "/images/web.svg",
     alt: "Web Pack",
     caption: "Webpack",
   },
   {
     id: 12,
-    image: "/src/assets/images/npm.svg",
+    image: "/images/npm.svg",
     alt: "npm",
     caption: "Npm",
   },
@@ -138,37 +138,37 @@ const LogoData = [
 const clientData = [
   {
     id: 1,
-    image: "/src/assets/images/client-logo/dmi.svg",
+    image: "/images/client-logo/dmi.svg",
     alt: "Dmi finance",
   },
   {
     id: 2,
-    image: "/src/assets/images/client-logo/jindal.svg",
+    image: "/images/client-logo/jindal.svg",
     alt: "jsw",
   },
   {
     id: 3,
-    image: "/src/assets/images/client-logo/pollisetty.svg",
+    image: "/images/client-logo/pollisetty.svg",
     alt: "Polisetty",
   },
   {
     id: 4,
-    image: "/src/assets/images/client-logo/screenroot.svg",
+    image: "/images/client-logo/screenroot.svg",
     alt: "screenroot",
   },
   {
     id: 5,
-    image: "/src/assets/images/client-logo/yesbank.png",
+    image: "/images/client-logo/yesbank.png",
     alt: "yesbank",
   },
   {
     id: 6,
-    image: "/src/assets/images/client-logo/nic.png",
+    image: "/images/client-logo/nic.png",
     alt: "NIC",
   },
   {
     id: 7,
-    image: "/src/assets/images/client-logo/webware.png",
+    image: "/images/client-logo/webware.png",
     alt: "webaware",
   },
 ];
@@ -178,7 +178,7 @@ const tabsData = [
     label: "Applications",
     content: [
       {
-        imgSrc: "/src/assets/images/search.png",
+        imgSrc: "/images/search.png",
         description: "applications",
         link: "https://searchify-app.vercel.app/",
         tile: "Searchify",
@@ -186,7 +186,7 @@ const tabsData = [
       },
 
       {
-        imgSrc: "/src/assets/images/contact.png",
+        imgSrc: "/images/contact.png",
         description: "applications",
         tile: "Contact Managemnt",
         link: "https://contact-app-prasad.vercel.app/",
@@ -194,21 +194,21 @@ const tabsData = [
       },
 
       {
-        imgSrc: "/src/assets/images/weather.png",
+        imgSrc: "/images/weather.png",
         description: "applications",
         tile: "weather forecast",
         link: "https://weather-app-prasad.vercel.app/",
         tech: ["react", "css"],
       },
       {
-        imgSrc: "/src/assets/images/Todo.png",
+        imgSrc: "/images/Todo.png",
         description: "applications",
         tile: "Todo",
         link: "https://todo-app-prasad.vercel.app/",
         tech: ["react", "css"],
       },
       {
-        imgSrc: "/src/assets/images/tictac.png",
+        imgSrc: "/images/tictac.png",
         description: "applications",
         tile: "Tic Tac Toe",
         link: "https://tictactoe-eta-prasad.vercel.app/",
@@ -228,14 +228,14 @@ const tabsData = [
     label: "Web Development",
     content: [
       {
-        imgSrc: "/src/assets/images/oldportfolio.png",
+        imgSrc: "/images/oldportfolio.png",
         description: "Web Development",
         tile: "Portfolio",
         link: "https://prasad-neroolkar.netlify.app/",
         tech: ["react", "css"],
       },
       {
-        imgSrc: "/src/assets/images/food.png",
+        imgSrc: "/images/food.png",
         description: "Web Development",
         tile: "Landing page",
         link: "https://food2eat.netlify.app/",
@@ -243,7 +243,7 @@ const tabsData = [
       },
 
       {
-        imgSrc: "/src/assets/images/trek.png",
+        imgSrc: "/images/trek.png",
         description: "Web Development",
         tile: "Landing page",
         link: "https://trek-it.netlify.app/",

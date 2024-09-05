@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import thanks from "../assets/images/thanks.png";
-import error from "../assets/images/error.png";
+import thanks from "/images/thanks.png";
+import error from "/images/error.png";
 
 import { IoMdClose } from "react-icons/io";
 

@@ -227,7 +227,6 @@
         }
 
         @media screen and (max-width: 375px) {
-
           @include font-rem(12px, 22px);
           width: 92px;
         }
@@ -317,7 +316,7 @@
       margin-bottom: 30px;
 
       li {
-        cursor: n;
+        cursor: pointer;
 
         @include bp(sm) {
           @include font-rem(14px, 14px);

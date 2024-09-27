@@ -8,49 +8,59 @@ import About from "./pages/About";
 import Resume from "./pages/Resume";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import Store from "./Store";
 
 function App() {
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
-  const showBtn = () => {
-    setShow(!show);
-  };
+  // const showBtn = () => {
+  //   setShow(!show);
+  // };
   return (
     <>
-      <section id="body">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-3 col mb-lg-0 mb-4 divFixed">
-              <Sidebar showStatus={show}>
-                <SideInfo handleShow={showBtn} />
-                <SidebarContact disBtn={show} />
-              </Sidebar>
-            </div>
-            <div className="col-lg-9 col-12">
-              <div className="main_content">
-                <Header />
-                <div className="pages_content">
-                  <Routes>
-                    <Route path="/" element={<About pageTitle="About Me" />} />
-                    <Route
-                      path="/resume"
-                      element={<Resume pageTitle="Resume" />}
-                    />
-                    <Route
-                      path="/portfolio"
-                      element={<Portfolio pageTitle="Portfolio" />}
-                    />
-                    <Route
-                      path="/Contact"
-                      element={<Contact pageTitle="Contact" />}
-                    />
-                  </Routes>
+      <Store>
+        <section id="body">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-3 col mb-lg-0 mb-4 divFixed">
+                {/* <Sidebar showStatus={show}>
+                  <SideInfo handleShow={showBtn} />
+                  <SidebarContact disBtn={show} />
+                </Sidebar> */}
+                <Sidebar>
+                  <SideInfo />
+                  <SidebarContact />
+                </Sidebar>
+              </div>
+              <div className="col-lg-9 col-12">
+                <div className="main_content">
+                  <Header />
+                  <div className="pages_content">
+                    <Routes>
+                      <Route
+                        path="/"
+                        element={<About pageTitle="About Me" />}
+                      />
+                      <Route
+                        path="/resume"
+                        element={<Resume pageTitle="Resume" />}
+                      />
+                      <Route
+                        path="/portfolio"
+                        element={<Portfolio pageTitle="Portfolio" />}
+                      />
+                      <Route
+                        path="/Contact"
+                        element={<Contact pageTitle="Contact" />}
+                      />
+                    </Routes>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </Store>
     </>
   );
 }

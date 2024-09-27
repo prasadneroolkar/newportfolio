@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import styles from "./Sidebar.module.scss";
+import { contextCreate } from "../../Store";
 
-const Sidebar = ({ children, showStatus }) => {
+const Sidebar = ({ children }) => {
+  const { show } = useContext(contextCreate);
+
   return (
-    <aside className={`${styles.sidebar} ${showStatus ? styles.active : " "} `}>
+    <aside className={`${styles.sidebar} ${show ? styles.active : " "} `}>
       {children}
     </aside>
   );

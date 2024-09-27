@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { CiMail } from "react-icons/ci";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { IoCalendarOutline } from "react-icons/io5";
@@ -9,14 +9,14 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import styles from "./SidebarContact.module.scss";
+import { contextCreate } from "../../Store";
 
-const SidebarContact = ({ disBtn }) => {
+const SidebarContact = () => {
+  const { show } = useContext(contextCreate);
   return (
     <>
       <div
-        className={`${styles.sidebar_info_more} ${
-          disBtn ? styles.visible : " "
-        }`}
+        className={`${styles.sidebar_info_more} ${show ? styles.visible : " "}`}
       >
         <div className={styles.separator}></div>
         <ul className={styles.contacts_list}>

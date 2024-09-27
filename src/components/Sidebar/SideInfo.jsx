@@ -1,9 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import myAvatar from "/images/pf3.png";
 import styles from "./Sidebar.module.scss";
 import { IoChevronDown } from "react-icons/io5";
+import { contextCreate } from "../../Store";
 
-const SideInfo = ({ handleShow }) => {
+const SideInfo = () => {
+  const { showBtn } = useContext(contextCreate);
+
   const [resize, setResize] = useState(
     window.matchMedia("(max-width: 480px)").matches
   );
@@ -36,7 +39,7 @@ const SideInfo = ({ handleShow }) => {
       <button
         className={`${styles.info_more_btn} `}
         data-sidebar-btn=""
-        onClick={handleShow}
+        onClick={showBtn}
       >
         {resize ? (
           <span>

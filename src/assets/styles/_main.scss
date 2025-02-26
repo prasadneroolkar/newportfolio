@@ -55,7 +55,8 @@ div#root {
 
 body {
   @include font-rem($htmlFontSize);
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -265,6 +266,7 @@ section#body {
 
     @include bp(sm) {
       padding: 15px;
+      margin-bottom: 60px;
     }
   }
 

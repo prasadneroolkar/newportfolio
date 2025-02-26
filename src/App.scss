@@ -194,16 +194,22 @@
 
 
     ul.logos {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: flex-start;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(112px, 100%), 1fr));
       column-gap: 20px;
       row-gap: 20px;
+      // display: flex;
+      // align-items: center;
+      // flex-wrap: wrap;
+      // justify-content: flex-start;
+      // column-gap: 20px;
+      // row-gap: 20px;
       // animation: marquee 20s linear infinite;
 
 
       li {
+        display: grid;
+        place-items: center;
         background-color: color(bg-color);
         gap: 10px;
         border-radius: 10px;
@@ -221,15 +227,34 @@
 
         }
 
+        span {
+          display: inline-block;
+        }
+
         @include bp(sm) {
+
           @include font-rem(12px, 22px);
-          width: 92px;
+          max-width: 100px;
         }
 
         @media screen and (max-width: 375px) {
           @include font-rem(12px, 22px);
           width: 92px;
         }
+      }
+
+      @media screen and (max-width: 1024px) {
+        column-gap: 0;
+      }
+
+      @include bp(tablet-sm) {
+
+        column-gap: 15px;
+      }
+
+      @include bp(sm) {
+        grid-template-columns: repeat(auto-fit, minmax(min(92px, 100%), 1fr));
+        column-gap: 10px;
       }
 
 

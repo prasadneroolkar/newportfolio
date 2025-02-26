@@ -31,10 +31,7 @@ const About = ({ pageTitle }) => {
           {LogoData.map((elem) => {
             return (
               <>
-                <li
-                  key={elem.id}
-                  className="d-flex justify-content-center align-items-center flex-column"
-                >
+                <li key={elem.id} className="">
                   <img src={elem.image} alt={elem.alt} />
                   <span>{elem.caption}</span>
                 </li>

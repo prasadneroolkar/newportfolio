@@ -178,6 +178,13 @@ const tabsData = [
     label: "Applications",
     content: [
       {
+        imgSrc: "/images/movie.png",
+        description: "applications",
+        link: "https://movie-watchlists-prasad.vercel.app/",
+        tile: "Movie Watchlists",
+        tech: ["react", "redux", "scss", "api"],
+      },
+      {
         imgSrc: "/images/search.png",
         description: "applications",
         link: "https://searchify-app.vercel.app/",
@@ -234,6 +241,7 @@ const tabsData = [
         link: "https://prasad-neroolkar.netlify.app/",
         tech: ["react", "css"],
       },
+
       {
         imgSrc: "/images/food.png",
         description: "Web Development",

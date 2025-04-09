@@ -235,6 +235,27 @@ const tabsData = [
     label: "Web Development",
     content: [
       {
+        imgSrc: "/images/dmi.png",
+        description: "Web Development",
+        tile: "DMI Finance Website",
+        link: "https://www.dmifinance.in/",
+        tech: ["WordPress", "Custom Theme"],
+      },
+      {
+        imgSrc: "/images/jsl.png",
+        description: "Web Development",
+        tile: "Jindal Microsite",
+        link: "https://www.jindalstainless.com/annualreport-2023/",
+        tech: ["Html", "css", "Javascript"],
+      },
+      {
+        imgSrc: "/images/yesbank.png",
+        description: "Web Development",
+        tile: "Landing Page",
+        link: "https://www.yesbank.in/personal-banking/yes-first",
+        tech: ["Html", "css", "Javascript"],
+      },
+      {
         imgSrc: "/images/oldportfolio.png",
         description: "Web Development",
         tile: "Portfolio",
